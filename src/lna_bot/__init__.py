@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional, Tuple
 import json
 
-from .models import LNARecord, LNAAnalysisResult, DatasetSummary
+from .models import LNARecord, LNAAnalysisResult, DatasetSummary, BusinessRules, SkillsMapping
 from .core.decision_engine import LNADecisionEngine
 from .utils.config_loader import ConfigurationLoader, DataLoader
 from .utils.data_processor import DataProcessor
@@ -47,9 +47,9 @@ class LNABot:
         self.data_processor = DataProcessor()
         
         # Load configuration
-        self.business_rules = None
-        self.skills_mapping = None
-        self.decision_engine = None
+        self.business_rules: Optional[BusinessRules] = None
+        self.skills_mapping: Optional[SkillsMapping] = None
+        self.decision_engine: Optional[LNADecisionEngine] = None
         
         self._initialize_components()
         
@@ -102,6 +102,7 @@ class LNABot:
             records = self.data_processor.dataframe_to_records(df)
             
             # Analyze records
+            assert self.decision_engine is not None, "Decision engine not initialized"
             analysis_results, summary = self.decision_engine.analyze_dataset(records)
             
             logger.info(f"Analysis complete: {len(analysis_results)} records processed")
@@ -128,6 +129,7 @@ class LNABot:
         logger.info(f"Analyzing single record: {record.id}")
         
         try:
+            assert self.decision_engine is not None, "Decision engine not initialized"
             result = self.decision_engine.analyze_record(record)
             logger.info(f"Single record analysis complete: {record.id}")
             return result
@@ -146,6 +148,7 @@ class LNABot:
         Returns:
             List of associated skills
         """
+        assert self.skills_mapping is not None, "Skills mapping not initialized"
         return self.skills_mapping.get_skills_for_competency(competency)
     
     def get_training_recommendation(self, estimated_trainees: int, competency: str) -> Dict[str, Any]:
@@ -160,6 +163,11 @@ class LNABot:
             Dictionary with recommendation details
         """
         try:
+            # Ensure all components are initialized
+            assert self.business_rules is not None, "Business rules not initialized"
+            assert self.decision_engine is not None, "Decision engine not initialized"
+            assert self.skills_mapping is not None, "Skills mapping not initialized"
+            
             # Get competency classification
             competency_classification = self.business_rules.get_competency_classification(competency)
             
@@ -243,6 +251,9 @@ class LNABot:
         Returns:
             Dictionary with business rules information
         """
+        assert self.business_rules is not None, "Business rules not initialized"
+        assert self.skills_mapping is not None, "Skills mapping not initialized"
+        
         return {
             'external_threshold': self.business_rules.external_threshold,
             'in_house_threshold': self.business_rules.in_house_threshold,

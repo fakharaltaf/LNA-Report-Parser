@@ -1,0 +1,72 @@
+============================================================
+LNA DATASET ANALYSIS SUMMARY
+============================================================
+
+BASIC STATISTICS:
+  Total Entries: 20
+  Total Trainees: 1065
+  Average Trainees per Entry: 53.25
+
+TRAINING TYPE DISTRIBUTION:
+  In-house: 4 (20.0%)
+  SDP: 16 (80.0%)
+
+PRIORITY LEVEL DISTRIBUTION:
+  High: 9 (45.0%)
+  Medium: 7 (35.0%)
+  Low: 4 (20.0%)
+
+TOP COMPETENCIES BY DEMAND:
+   1. Workplace Safety & Health
+      Demand Score: 320.0
+      Training Type: TrainingType.IN_HOUSE
+      Trainees: 320
+
+   2. Diversity & Inclusion Awareness
+      Demand Score: 275.0
+      Training Type: TrainingType.IN_HOUSE
+      Trainees: 275
+
+   3. Lean Manufacturing & Six Sigma
+      Demand Score: 195.0
+      Training Type: TrainingType.IN_HOUSE
+      Trainees: 65
+
+   4. Mental Health & Wellness
+      Demand Score: 178.0
+      Training Type: TrainingType.IN_HOUSE
+      Trainees: 89
+
+   5. Microservices Architecture
+      Demand Score: 108.0
+      Training Type: TrainingType.SDP
+      Trainees: 36
+
+   6. Robotics & Automation
+      Demand Score: 87.0
+      Training Type: TrainingType.SDP
+      Trainees: 29
+
+   7. Digital Marketing & Social Media
+      Demand Score: 66.0
+      Training Type: TrainingType.SDP
+      Trainees: 33
+
+   8. Telemedicine & Digital Health
+      Demand Score: 63.0
+      Training Type: TrainingType.SDP
+      Trainees: 21
+
+   9. Project Management Certification
+      Demand Score: 48.0
+      Training Type: TrainingType.SDP
+      Trainees: 24
+
+  10. Crisis Management & Business Continuity
+      Demand Score: 45.0
+      Training Type: TrainingType.SDP
+      Trainees: 15
+
+============================================================
+Analysis generated on: 2025-09-26 10:59:08
+============================================================

@@ -1,5 +1,5 @@
 """
-Comprehensive functionality test for LNA Bot.
+Simple comprehensive functionality test for LNA Bot.
 """
 
 import sys
@@ -12,13 +12,11 @@ sys.path.insert(0, str(src_path))
 from lna_bot import LNABot
 from lna_bot.models import LNARecord, PriorityLevel, CompetencyType, RequestType
 from datetime import datetime
-from rich.console import Console
-
-console = Console()
 
 def test_individual_record_analysis():
     """Test analysis of individual records."""
-    console.print("\n[bold blue]Testing Individual Record Analysis[/bold blue]")
+    print("\nTesting Individual Record Analysis")
+    print("-" * 40)
     
     try:
         bot = LNABot()
@@ -43,21 +41,22 @@ def test_individual_record_analysis():
         
         result = bot.analyze_single_record(record)
         
-        console.print(f"✓ Record ID: {result.record.id}")
-        console.print(f"✓ Competency: {result.record.targeted_competencies}")
-        console.print(f"✓ Trainees: {result.record.estimated_trainees}")
-        console.print(f"✓ Recommendation: {result.recommendation.training_type.value}")
-        console.print(f"✓ Reasoning: {result.recommendation.reasoning}")
+        print(f"✓ Record ID: {result.record.id}")
+        print(f"✓ Competency: {result.record.targeted_competencies}")
+        print(f"✓ Trainees: {result.record.estimated_trainees}")
+        print(f"✓ Recommendation: {result.recommendation.training_type.value}")
+        print(f"✓ Reasoning: {result.recommendation.reasoning}")
         
         return True
         
     except Exception as e:
-        console.print(f"✗ Individual record analysis failed: {e}")
+        print(f"✗ Individual record analysis failed: {e}")
         return False
 
 def test_csv_analysis():
     """Test CSV file analysis."""
-    console.print("\n[bold blue]Testing CSV File Analysis[/bold blue]")
+    print("\nTesting CSV File Analysis")
+    print("-" * 30)
     
     try:
         bot = LNABot()
@@ -76,20 +75,21 @@ def test_csv_analysis():
             if Path(csv_file).exists():
                 results, summary = bot.analyze_csv_file(Path(csv_file))
                 total_processed += len(results)
-                console.print(f"✓ {csv_file}: {len(results)} records")
+                print(f"✓ {csv_file}: {len(results)} records")
             else:
-                console.print(f"⚠ File not found: {csv_file}")
+                print(f"⚠ File not found: {csv_file}")
         
-        console.print(f"✓ Total records processed: {total_processed}")
+        print(f"✓ Total records processed: {total_processed}")
         return True
         
     except Exception as e:
-        console.print(f"✗ CSV analysis failed: {e}")
+        print(f"✗ CSV analysis failed: {e}")
         return False
 
 def test_business_rules():
     """Test business rule scenarios."""
-    console.print("\n[bold blue]Testing Business Rules[/bold blue]")
+    print("\nTesting Business Rules")
+    print("-" * 22)
     
     try:
         bot = LNABot()
@@ -110,17 +110,18 @@ def test_business_rules():
                 competency=competencies[i % len(competencies)]
             )
             
-            console.print(f"✓ {trainees} trainees → {recommendation['training_type'].value} ({expected})")
+            print(f"✓ {trainees} trainees → {recommendation['training_type'].value} ({expected})")
         
         return True
         
     except Exception as e:
-        console.print(f"✗ Business rules test failed: {e}")
+        print(f"✗ Business rules test failed: {e}")
         return False
 
 def test_configuration_validation():
     """Test configuration validation."""
-    console.print("\n[bold blue]Testing Configuration Validation[/bold blue]")
+    print("\nTesting Configuration Validation")
+    print("-" * 35)
     
     try:
         bot = LNABot()
@@ -128,25 +129,26 @@ def test_configuration_validation():
         # Test configuration validation
         issues = bot.validate_configuration()
         if issues:
-            console.print(f"⚠ Configuration issues: {issues}")
+            print(f"⚠ Configuration issues: {issues}")
         else:
-            console.print("✓ Configuration validation passed")
+            print("✓ Configuration validation passed")
         
         # Test configuration info retrieval
         config_info = bot.get_business_rules_info()
-        console.print(f"✓ External threshold: {config_info['external_threshold']}")
-        console.print(f"✓ In-house threshold: {config_info['in_house_threshold']}")
-        console.print(f"✓ Skills mapped: {config_info['total_skills_mapped']}")
+        print(f"✓ External threshold: {config_info['external_threshold']}")
+        print(f"✓ In-house threshold: {config_info['in_house_threshold']}")
+        print(f"✓ Skills mapped: {config_info['total_skills_mapped']}")
         
         return True
         
     except Exception as e:
-        console.print(f"✗ Configuration validation failed: {e}")
+        print(f"✗ Configuration validation failed: {e}")
         return False
 
 def test_export_functionality():
     """Test result export functionality."""
-    console.print("\n[bold blue]Testing Export Functionality[/bold blue]")
+    print("\nTesting Export Functionality")
+    print("-" * 30)
     
     try:
         bot = LNABot()
@@ -159,29 +161,30 @@ def test_export_functionality():
         bot.export_results_to_json(results, summary, output_file)
         
         if output_file.exists():
-            console.print(f"✓ Results exported to {output_file}")
+            print(f"✓ Results exported to {output_file}")
             output_file.unlink()  # Clean up
         else:
-            console.print("✗ Export file not created")
+            print("✗ Export file not created")
             return False
         
         # Test summary report
         summary_report = bot.get_summary_report(summary)
         if summary_report and len(summary_report) > 100:
-            console.print("✓ Summary report generated")
+            print("✓ Summary report generated")
         else:
-            console.print("✗ Summary report generation failed")
+            print("✗ Summary report generation failed")
             return False
         
         return True
         
     except Exception as e:
-        console.print(f"✗ Export functionality test failed: {e}")
+        print(f"✗ Export functionality test failed: {e}")
         return False
 
 def test_error_handling():
     """Test error handling scenarios."""
-    console.print("\n[bold blue]Testing Error Handling[/bold blue]")
+    print("\nTesting Error Handling")
+    print("-" * 23)
     
     try:
         bot = LNABot()
@@ -189,28 +192,28 @@ def test_error_handling():
         # Test with non-existent file
         try:
             bot.analyze_csv_file(Path("non_existent_file.csv"))
-            console.print("✗ Should have failed with non-existent file")
+            print("✗ Should have failed with non-existent file")
             return False
         except Exception:
-            console.print("✓ Properly handled non-existent file")
+            print("✓ Properly handled non-existent file")
         
         # Test with invalid competency
         recommendation = bot.get_training_recommendation(
             estimated_trainees=25,
             competency="NonExistentCompetency"
         )
-        console.print("✓ Handled unknown competency gracefully")
+        print("✓ Handled unknown competency gracefully")
         
         return True
         
     except Exception as e:
-        console.print(f"✗ Error handling test failed: {e}")
+        print(f"✗ Error handling test failed: {e}")
         return False
 
 def main():
     """Run comprehensive functionality tests."""
-    console.print("[bold green]LNA Bot Comprehensive Functionality Test[/bold green]")
-    console.print("=" * 60)
+    print("LNA Bot Comprehensive Functionality Test")
+    print("=" * 50)
     
     tests = [
         test_individual_record_analysis,
@@ -228,32 +231,32 @@ def main():
         if test():
             passed += 1
     
-    console.print("\n" + "=" * 60)
-    console.print(f"[bold green]Test Results: {passed}/{total} tests passed[/bold green]")
+    print("\n" + "=" * 50)
+    print(f"Test Results: {passed}/{total} tests passed")
     
     if passed == total:
-        console.print("\n[bold green]🎉 All functionality tests passed![/bold green]")
-        console.print("\n[bold green]LNA Bot is fully functional and ready for production use![/bold green]")
+        print("\n🎉 All functionality tests passed!")
+        print("\nLNA Bot is fully functional and ready for production use!")
         
-        console.print("\n[bold cyan]Key Features Validated:[/bold cyan]")
-        console.print("✓ Individual record analysis")
-        console.print("✓ Batch CSV file processing")
-        console.print("✓ Business rule implementation")
-        console.print("✓ Configuration management")
-        console.print("✓ Result export (JSON)")
-        console.print("✓ Error handling")
-        console.print("✓ Data validation")
-        console.print("✓ Skills mapping")
-        console.print("✓ Competency classification")
-        console.print("✓ Recommendation reasoning")
+        print("\nKey Features Validated:")
+        print("✓ Individual record analysis")
+        print("✓ Batch CSV file processing")
+        print("✓ Business rule implementation")
+        print("✓ Configuration management")
+        print("✓ Result export (JSON)")
+        print("✓ Error handling")
+        print("✓ Data validation")
+        print("✓ Skills mapping")
+        print("✓ Competency classification")
+        print("✓ Recommendation reasoning")
         
-        console.print("\n[bold yellow]Usage Examples:[/bold yellow]")
-        console.print("• Analyze CSV: python demo.py")
-        console.print("• Run tests: python comprehensive_test.py")
-        console.print("• Custom analysis: Import LNABot class and use programmatically")
+        print("\nUsage Examples:")
+        print("• Analyze CSV: python demo_simple.py")
+        print("• Run tests: python test_simple.py")
+        print("• Custom analysis: Import LNABot class and use programmatically")
         
     else:
-        console.print(f"\n[bold red]❌ {total - passed} tests failed. Please review the issues above.[/bold red]")
+        print(f"\n❌ {total - passed} tests failed. Please review the issues above.")
         sys.exit(1)
 
 if __name__ == "__main__":

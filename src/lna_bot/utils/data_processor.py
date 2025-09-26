@@ -316,28 +316,3 @@ class DataProcessor:
         lines.append("=" * 60)
         
         return "\n".join(lines)
-    
-    def summary_to_dict(self, summary: DatasetSummary) -> Dict[str, Any]:
-        """
-        Convert DatasetSummary to dictionary format.
-        
-        Args:
-            summary: DatasetSummary object to convert
-            
-        Returns:
-            Dictionary representation of the summary
-        """
-        try:
-            return {
-                'total_entries': summary.total_entries,
-                'total_trainees': summary.total_trainees,
-                'average_trainees_per_entry': summary.average_trainees_per_entry,
-                'training_type_distribution': summary.training_type_distribution,
-                'priority_distribution': summary.priority_distribution,
-                'competency_type_distribution': summary.competency_type_distribution,
-                'competencies_ranked_by_demand': summary.competencies_ranked_by_demand,
-                'analysis_date': summary.analysis_date.isoformat()
-            }
-        except Exception as e:
-            logger.error(f"Failed to convert summary to dict: {str(e)}")
-            raise DataProcessingError(f"Summary conversion failed: {str(e)}")

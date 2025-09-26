@@ -36,9 +36,7 @@ setup(
     python_requires=">=3.8",
     install_requires=[
         "pandas>=1.5.0",
-        "click>=8.0.0",
-        "rich>=12.0.0",
-        "pydantic>=1.10.0",
+        "pydantic>=1.10.0", 
         "python-dateutil>=2.8.0",
     ],
     extras_require={
@@ -50,11 +48,7 @@ setup(
             "mypy>=1.0.0",
         ],
     },
-    entry_points={
-        "console_scripts": [
-            "lna-bot=lna_bot.cli:cli",
-        ],
-    },
+
     include_package_data=True,
     zip_safe=False,
 )
