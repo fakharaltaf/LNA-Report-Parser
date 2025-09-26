@@ -85,15 +85,19 @@ lna-bot interactive
 ### Basic Analysis
 
 ```bash
-# Analyze LNA file with default settings
-lna-bot analyze Testing/LNA_Sample_Data/lna_healthcare_data.csv
+# Run the main application
+python main.py
+
+# Or analyze specific dataset programmatically
+python -c "from src.lna_bot import LNABot; bot = LNABot(); bot.analyze('data/test_datasets/test_data.csv')"
 ```
 
 ### Advanced Analysis
 
 ```bash
-# Custom configuration directory and detailed export
-lna-bot -c ./custom_config analyze data.csv -d -o detailed_results.json
+# Process large datasets
+python main.py
+# Then select option 5 (test_data_large.csv)
 ```
 
 ### Configuration Management
@@ -110,7 +114,7 @@ lna-bot skills "Patient Safety"
 
 ### Business Rules Configuration
 
-Create `Testing/Configuration/business_rules.json`:
+Configuration files are located in `config/business_rules.json`:
 
 ```json
 {
@@ -134,7 +138,7 @@ Create `Testing/Configuration/business_rules.json`:
 
 ### Skills Mapping Configuration
 
-Create `Testing/Configuration/skills_mapping.json`:
+Located in `config/skills_mapping.json`:
 
 ```json
 {
@@ -223,19 +227,30 @@ Detailed results are exported in structured JSON format:
 ### Project Structure
 
 ```
-lna-bot/
-├── src/lna_bot/
-│   ├── __init__.py          # Main LNABot class
-│   ├── cli.py               # CLI interface
-│   ├── models/              # Data models
-│   ├── core/                # Business logic
-│   └── utils/               # Utilities
-├── Testing/
-│   ├── Configuration/       # Config files
-│   └── LNA_Sample_Data/     # Test data
-├── requirements.txt
-├── setup.py
-└── README.md
+v4_cli/
+├── src/                    # Source code
+│   └── lna_bot/           # Main package
+│       ├── __init__.py    # Package initialization & main LNABot class
+│       ├── decision_engine.py  # Core business logic
+│       ├── data_processor.py   # Data processing & validation
+│       └── lna_bot.py     # LNA Bot implementation
+├── tests/                 # Test suite
+│   ├── integration/       # Integration tests
+│   └── unit/             # Unit tests (future)
+├── examples/             # Usage examples and demos
+├── docs/                 # Documentation
+├── config/               # Configuration files
+│   ├── business_rules.json
+│   └── skills_mapping.json
+├── data/                 # Data files and datasets
+│   └── test_datasets/    # Test CSV files
+├── outputs/              # Generated outputs
+├── logs/                 # Application logs
+├── scripts/              # Utility scripts
+├── main.py              # Main entry point
+├── requirements.txt     # Dependencies
+├── .gitignore          # Git ignore rules
+└── README.md           # This file
 ```
 
 ### Key Components
@@ -313,7 +328,7 @@ All test data includes corresponding expected results in JSON format for validat
 **Configuration Not Found**
 ```bash
 # Ensure configuration directory exists
-ls Testing/Configuration/
+ls config/
 ```
 
 **Import Errors**
@@ -329,14 +344,14 @@ pip install -e .
 
 ### Logging
 
-The application logs to both console and `lna_bot.log` file:
+The application logs to `logs/lna_bot.log` file:
 
 ```bash
-# Enable verbose logging
-lna-bot -v analyze data.csv
+# Check log file (Windows)
+Get-Content logs\lna_bot.log -Tail 10 -Wait
 
-# Check log file
-tail -f lna_bot.log
+# Check log file (Linux/Mac)
+tail -f logs/lna_bot.log
 ```
 
 ## Contributing
@@ -360,6 +375,15 @@ For support and questions:
 - Review the test data for examples
 
 ## Changelog
+
+### Version 4.0.0 (Current)
+- 🏗️ **Major Project Reorganization**: Professional Python package structure
+- 📁 **Improved Directory Structure**: Separated concerns with dedicated directories
+- ✅ **Enhanced Testing Framework**: Organized integration and unit test structure  
+- 📚 **Comprehensive Documentation**: README files for each directory
+- 🔧 **Better Configuration Management**: Centralized config directory
+- 📊 **Organized Data Management**: Structured data and outputs directories
+- 🛡️ **Security Improvements**: .gitignore and proper file organization
 
 ### Version 1.0.0
 - Initial release

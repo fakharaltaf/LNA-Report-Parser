@@ -39,7 +39,7 @@ class LNABot:
         Args:
             config_dir: Directory containing configuration files
         """
-        self.config_dir = config_dir or Path("Testing/Configuration")
+        self.config_dir = config_dir or Path("config")
         
         # Initialize components
         self.config_loader = ConfigurationLoader(self.config_dir)

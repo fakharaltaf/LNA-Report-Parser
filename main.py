@@ -36,10 +36,10 @@ def analyze_csv():
     """Analyze a CSV file."""
     print("\nAvailable CSV files:")
     csv_files = [
-        "Testing/TestData/lna_report_2024_q1.csv",
-        "Testing/TestData/lna_report_2024_q2.csv", 
-        "Testing/TestData/lna_report_2024_q3.csv",
-        "Testing/TestData/lna_report_2024_q4_2025_preview.csv"
+        "data/test_datasets/lna_report_2024_q1.csv",
+        "data/test_datasets/lna_report_2024_q2.csv", 
+        "data/test_datasets/lna_report_2024_q3.csv",
+        "data/test_datasets/lna_report_2024_q4_2025_preview.csv"
     ]
     
     for i, file in enumerate(csv_files, 1):
@@ -103,7 +103,7 @@ def analyze_csv():
         # Ask to export
         export = input(f"\nExport results to JSON? (y/n): ").strip().lower()
         if export == 'y':
-            output_file = Path(f"analysis_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
+            output_file = Path(f"outputs/analysis_results/analysis_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
             bot.export_results_to_json(results, summary, output_file)
             print(f"Results exported to: {output_file}")
         
@@ -279,10 +279,10 @@ def export_analysis():
     try:
         # Select file to analyze
         csv_files = [
-            "Testing/TestData/lna_report_2024_q1.csv",
-            "Testing/TestData/lna_report_2024_q2.csv",
-            "Testing/TestData/lna_report_2024_q3.csv", 
-            "Testing/TestData/lna_report_2024_q4_2025_preview.csv"
+            "data/test_datasets/lna_report_2024_q1.csv",
+            "data/test_datasets/lna_report_2024_q2.csv",
+            "data/test_datasets/lna_report_2024_q3.csv", 
+            "data/test_datasets/lna_report_2024_q4_2025_preview.csv"
         ]
         
         print("Select file to analyze and export:")
@@ -307,8 +307,8 @@ def export_analysis():
         
         # Export options
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        json_file = Path(f"lna_analysis_{timestamp}.json")
-        summary_file = Path(f"lna_summary_{timestamp}.txt")
+        json_file = Path(f"outputs/analysis_results/lna_analysis_{timestamp}.json")
+        summary_file = Path(f"outputs/reports/lna_summary_{timestamp}.txt")
         
         # Export JSON
         bot.export_results_to_json(results, summary, json_file)
@@ -394,7 +394,7 @@ def test_individual_record():
 def test_csv_analysis():
     """Test CSV file analysis."""
     bot = LNABot()
-    csv_path = Path("Testing/TestData/lna_report_2024_q1.csv")
+    csv_path = Path("data/test_datasets/lna_report_2024_q1.csv")
     if not csv_path.exists():
         return False
     results, summary = bot.analyze_csv_file(csv_path)
@@ -424,7 +424,7 @@ def test_business_rules_validation():
 def test_export_functions():
     """Test export functionality."""
     bot = LNABot()
-    csv_path = Path("Testing/TestData/lna_report_2024_q1.csv")
+    csv_path = Path("data/test_datasets/lna_report_2024_q1.csv")
     if not csv_path.exists():
         return False
     

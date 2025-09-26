@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 # Add src to path for testing
-src_path = Path(__file__).parent / "src"
+src_path = Path(__file__).parent.parent.parent / "src"
 sys.path.insert(0, str(src_path))
 
 def test_imports():
@@ -42,7 +42,7 @@ def test_configuration():
     try:
         from lna_bot.utils.config_loader import ConfigurationLoader
         
-        config_dir = Path("Testing/Configuration")
+        config_dir = Path("config")
         if not config_dir.exists():
             print(f"✗ Configuration directory not found: {config_dir}")
             return False

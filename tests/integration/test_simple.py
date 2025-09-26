@@ -1,12 +1,11 @@
 """
 Simple comprehensive functionality test for LNA Bot.
 """
-
 import sys
 from pathlib import Path
 
 # Add src to path
-src_path = Path(__file__).parent / "src"  
+src_path = Path(__file__).parent.parent.parent / "src"  
 sys.path.insert(0, str(src_path))
 
 from lna_bot import LNABot
@@ -63,10 +62,10 @@ def test_csv_analysis():
         
         # Test all CSV files
         csv_files = [
-            "Testing/TestData/lna_report_2024_q1.csv",
-            "Testing/TestData/lna_report_2024_q2.csv",
-            "Testing/TestData/lna_report_2024_q3.csv",
-            "Testing/TestData/lna_report_2024_q4_2025_preview.csv"
+            "data/test_datasets/lna_report_2024_q1.csv",
+            "data/test_datasets/lna_report_2024_q2.csv",
+            "data/test_datasets/lna_report_2024_q3.csv",
+            "data/test_datasets/lna_report_2024_q4_2025_preview.csv"
         ]
         
         total_processed = 0
@@ -154,7 +153,7 @@ def test_export_functionality():
         bot = LNABot()
         
         # Analyze a file
-        results, summary = bot.analyze_csv_file(Path("Testing/TestData/lna_report_2024_q1.csv"))
+        results, summary = bot.analyze_csv_file(Path("data/test_datasets/lna_report_2024_q1.csv"))
         
         # Test JSON export
         output_file = Path("test_output.json")
