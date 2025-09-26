@@ -1,0 +1,456 @@
+{
+  "test_dataset": "lna_report_2024_q1.csv",
+  "total_entries": 20,
+  "expected_results": [
+    {
+      "id": "LNA001",
+      "submission": "2024-01-15",
+      "priority": "High",
+      "competency": "Cloud Computing & DevOps",
+      "estimated_trainees": 45,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "45 trainees falls in SDP range (11-50)",
+      "demand_score": 135,
+      "associated_skills": [
+        "AWS/Azure/GCP Platform Management",
+        "Container Orchestration (Docker, Kubernetes)",
+        "Infrastructure as Code (Terraform, CloudFormation)",
+        "CI/CD Pipeline Design",
+        "Monitoring and Logging",
+        "Auto-scaling and Load Balancing",
+        "Cloud Security Best Practices"
+      ]
+    },
+    {
+      "id": "LNA002",
+      "submission": "2024-01-18",
+      "priority": "Medium",
+      "competency": "Strategic Planning & Decision Making",
+      "estimated_trainees": 12,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "12 trainees falls in SDP range (11-50)",
+      "demand_score": 24,
+      "associated_skills": [
+        "Strategic Thinking",
+        "Market Analysis",
+        "Resource Allocation",
+        "Risk Assessment",
+        "Stakeholder Management",
+        "Performance Measurement",
+        "Vision Communication"
+      ]
+    },
+    {
+      "id": "LNA003",
+      "submission": "2024-01-22",
+      "priority": "High",
+      "competency": "Advanced Data Analytics",
+      "estimated_trainees": 8,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 24,
+      "associated_skills": [
+        "Statistical Analysis and Modeling",
+        "Machine Learning Algorithms",
+        "Data Visualization (Tableau, Power BI)",
+        "SQL and NoSQL Databases",
+        "Python/R Programming",
+        "Big Data Technologies (Hadoop, Spark)",
+        "A/B Testing and Experimentation"
+      ]
+    },
+    {
+      "id": "LNA004",
+      "submission": "2024-01-25",
+      "priority": "Low",
+      "competency": "Communication & Presentation Skills",
+      "estimated_trainees": 150,
+      "competency_classification": "common",
+      "expected_training_type": "In-house",
+      "reasoning": "150 trainees exceeds 50, common competency suitable for in-house",
+      "demand_score": 150,
+      "associated_skills": [
+        "Public Speaking",
+        "Written Communication",
+        "Active Listening",
+        "Visual Communication",
+        "Storytelling",
+        "Audience Analysis",
+        "Persuasion Techniques"
+      ]
+    },
+    {
+      "id": "LNA005",
+      "submission": "2024-02-01",
+      "priority": "High",
+      "competency": "Financial Risk Assessment",
+      "estimated_trainees": 6,
+      "competency_classification": "common",
+      "expected_training_type": "External",
+      "reasoning": "6 trainees is below 10, common competency suitable for external",
+      "demand_score": 18,
+      "associated_skills": [
+        "Credit Risk Analysis",
+        "Market Risk Modeling",
+        "Operational Risk Management",
+        "Regulatory Capital",
+        "Stress Testing",
+        "Portfolio Management",
+        "Risk Reporting"
+      ]
+    },
+    {
+      "id": "LNA006",
+      "submission": "2024-02-05",
+      "priority": "Medium",
+      "competency": "Cybersecurity & Information Security",
+      "estimated_trainees": 25,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "25 trainees falls in SDP range (11-50)",
+      "demand_score": 50,
+      "associated_skills": [
+        "Threat Assessment and Analysis",
+        "Network Security Architecture",
+        "Incident Response and Forensics",
+        "Security Frameworks (NIST, ISO 27001)",
+        "Penetration Testing",
+        "Security Awareness Training",
+        "Compliance Management"
+      ]
+    },
+    {
+      "id": "LNA007",
+      "submission": "2024-02-08",
+      "priority": "High",
+      "competency": "Change Management",
+      "estimated_trainees": 18,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "18 trainees falls in SDP range (11-50)",
+      "demand_score": 54,
+      "associated_skills": [
+        "Change Process Design",
+        "Stakeholder Analysis",
+        "Communication Planning",
+        "Resistance Management",
+        "Training and Development",
+        "Culture Transformation",
+        "Change Measurement"
+      ]
+    },
+    {
+      "id": "LNA008",
+      "submission": "2024-02-12",
+      "priority": "Medium",
+      "competency": "Machine Learning & AI",
+      "estimated_trainees": 35,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 70,
+      "associated_skills": [
+        "Deep Learning Frameworks",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Model Training and Optimization",
+        "MLOps and Model Deployment",
+        "Ethical AI Principles",
+        "Data Preprocessing"
+      ]
+    },
+    {
+      "id": "LNA009",
+      "submission": "2024-02-15",
+      "priority": "Low",
+      "competency": "Data Privacy & GDPR",
+      "estimated_trainees": 280,
+      "competency_classification": "common",
+      "expected_training_type": "In-house",
+      "reasoning": "280 trainees exceeds 50, common competency suitable for in-house",
+      "demand_score": 280,
+      "associated_skills": [
+        "Privacy Law Understanding",
+        "Data Protection Impact Assessments",
+        "Consent Management",
+        "Data Subject Rights",
+        "Privacy by Design",
+        "Breach Response",
+        "International Transfers"
+      ]
+    },
+    {
+      "id": "LNA010",
+      "submission": "2024-02-18",
+      "priority": "High",
+      "competency": "Blockchain Technology",
+      "estimated_trainees": 4,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 12,
+      "associated_skills": [
+        "Distributed Ledger Technology",
+        "Smart Contract Development",
+        "Cryptocurrency Fundamentals",
+        "Consensus Mechanisms",
+        "DeFi Protocol Understanding",
+        "Security Auditing",
+        "Tokenomics Design"
+      ]
+    },
+    {
+      "id": "LNA011",
+      "submission": "2024-02-22",
+      "priority": "Medium",
+      "competency": "Customer Relationship Management",
+      "estimated_trainees": 22,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "22 trainees falls in SDP range (11-50)",
+      "demand_score": 44,
+      "associated_skills": [
+        "Customer Needs Analysis",
+        "Relationship Building",
+        "Service Excellence",
+        "Complaint Resolution",
+        "Customer Retention",
+        "Sales Techniques",
+        "Digital Customer Experience"
+      ]
+    },
+    {
+      "id": "LNA012",
+      "submission": "2024-02-25",
+      "priority": "High",
+      "competency": "IoT & Embedded Systems",
+      "estimated_trainees": 12,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 36,
+      "associated_skills": [
+        "Sensor Integration",
+        "Embedded Programming (C/C++)",
+        "Wireless Communication Protocols",
+        "Edge Computing",
+        "Real-time Systems Design",
+        "Hardware-Software Integration",
+        "Power Management"
+      ]
+    },
+    {
+      "id": "LNA013",
+      "submission": "2024-03-01",
+      "priority": "Low",
+      "competency": "Time Management & Productivity",
+      "estimated_trainees": 195,
+      "competency_classification": "common",
+      "expected_training_type": "In-house",
+      "reasoning": "195 trainees exceeds 50, common competency suitable for in-house",
+      "demand_score": 195,
+      "associated_skills": [
+        "Priority Setting",
+        "Goal Setting",
+        "Task Planning",
+        "Focus Techniques",
+        "Delegation Skills",
+        "Technology Tools",
+        "Work-Life Balance"
+      ]
+    },
+    {
+      "id": "LNA014",
+      "submission": "2024-03-05",
+      "priority": "High",
+      "competency": "Advanced Excel & Financial Modeling",
+      "estimated_trainees": 16,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "16 trainees falls in SDP range (11-50)",
+      "demand_score": 48,
+      "associated_skills": [
+        "Advanced Excel Functions",
+        "Financial Statement Analysis",
+        "Valuation Models",
+        "Scenario Analysis",
+        "Monte Carlo Simulation",
+        "Dashboard Creation",
+        "VBA Programming"
+      ]
+    },
+    {
+      "id": "LNA015",
+      "submission": "2024-03-08",
+      "priority": "Medium",
+      "competency": "Emotional Intelligence & Team Dynamics",
+      "estimated_trainees": 28,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "28 trainees falls in SDP range (11-50)",
+      "demand_score": 56,
+      "associated_skills": [
+        "Self-Awareness",
+        "Empathy and Social Skills",
+        "Conflict Resolution",
+        "Team Building",
+        "Motivation Techniques",
+        "Communication Skills",
+        "Stress Management"
+      ]
+    },
+    {
+      "id": "LNA016",
+      "submission": "2024-03-12",
+      "priority": "High",
+      "competency": "Database Administration & Optimization",
+      "estimated_trainees": 9,
+      "competency_classification": "common",
+      "expected_training_type": "External",
+      "reasoning": "9 trainees is below 10, common competency suitable for external",
+      "demand_score": 27,
+      "associated_skills": [
+        "Database Design and Modeling",
+        "Performance Tuning",
+        "Backup and Recovery",
+        "High Availability Setup",
+        "Security and Access Control",
+        "Database Migration",
+        "Monitoring and Maintenance"
+      ]
+    },
+    {
+      "id": "LNA017",
+      "submission": "2024-03-15",
+      "priority": "Low",
+      "competency": "Medical Device Regulations",
+      "estimated_trainees": 14,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "14 trainees falls in SDP range (11-50)",
+      "demand_score": 14,
+      "associated_skills": [
+        "FDA Regulatory Requirements",
+        "Quality Management Systems",
+        "Clinical Trial Regulations",
+        "Risk Management (ISO 14971)",
+        "Device Classification",
+        "Regulatory Submissions",
+        "Post-Market Surveillance"
+      ]
+    },
+    {
+      "id": "LNA018",
+      "submission": "2024-03-18",
+      "priority": "High",
+      "competency": "Renewable Energy Systems",
+      "estimated_trainees": 31,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 93,
+      "associated_skills": [
+        "Solar Panel Technology",
+        "Wind Turbine Systems",
+        "Energy Storage",
+        "Grid Integration",
+        "Energy Efficiency",
+        "Sustainability Metrics",
+        "Policy and Regulations"
+      ]
+    },
+    {
+      "id": "LNA019",
+      "submission": "2024-03-22",
+      "priority": "Medium",
+      "competency": "Cross-Cultural Communication",
+      "estimated_trainees": 42,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "42 trainees falls in SDP range (11-50)",
+      "demand_score": 84,
+      "associated_skills": [
+        "Cultural Awareness",
+        "Language Sensitivity",
+        "Non-verbal Communication",
+        "Cultural Adaptation",
+        "Global Mindset",
+        "Inclusive Communication",
+        "Virtual Team Collaboration"
+      ]
+    },
+    {
+      "id": "LNA020",
+      "submission": "2024-03-25",
+      "priority": "High",
+      "competency": "Quantum Computing Fundamentals",
+      "estimated_trainees": 3,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 9,
+      "associated_skills": [
+        "Quantum Mechanics Principles",
+        "Quantum Algorithms",
+        "Quantum Programming Languages",
+        "Quantum Error Correction",
+        "Quantum Cryptography",
+        "Quantum Hardware Understanding",
+        "Quantum Software Development"
+      ]
+    }
+  ],
+  "summary_statistics": {
+    "training_type_distribution": {
+      "In-house": 3,
+      "SDP": 15,
+      "External": 2
+    },
+    "priority_distribution": {
+      "High": 10,
+      "Medium": 6,
+      "Low": 4
+    },
+    "competency_type_distribution": {
+      "niche": 6,
+      "common": 14
+    },
+    "total_trainees": 1051,
+    "average_trainees_per_entry": 52.55,
+    "competencies_ranked_by_demand": [
+      {
+        "rank": 1,
+        "competency": "Data Privacy & GDPR",
+        "demand_score": 280,
+        "training_type": "In-house"
+      },
+      {
+        "rank": 2,
+        "competency": "Time Management & Productivity",
+        "demand_score": 195,
+        "training_type": "In-house"
+      },
+      {
+        "rank": 3,
+        "competency": "Communication & Presentation Skills",
+        "demand_score": 150,
+        "training_type": "In-house"
+      },
+      {
+        "rank": 4,
+        "competency": "Cloud Computing & DevOps",
+        "demand_score": 135,
+        "training_type": "SDP"
+      },
+      {
+        "rank": 5,
+        "competency": "Renewable Energy Systems",
+        "demand_score": 93,
+        "training_type": "SDP"
+      }
+    ]
+  }
+}

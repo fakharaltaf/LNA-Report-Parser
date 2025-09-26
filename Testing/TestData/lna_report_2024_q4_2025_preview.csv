@@ -1,0 +1,21 @@
+ID,Submission,Priority,Competency type,Job families,Targeted competencies,Request type,Targeted audience,Estimated trainees,Comment,Year,Division,Department,Section
+LNA061,2025-10-02,High,Technical,IT & Digital,Advanced Cybersecurity Threat Hunting,New Training,Security Analysts,71,Enterprise security enhancement program,2025,Technology,Cybersecurity,Threat Intelligence
+LNA062,2025-10-05,Medium,Leadership,Management,Transformational Leadership,Upskilling,Executive Team,14,Leadership transformation initiative,2025,Executive,Leadership Development,Executive Coaching
+LNA063,2025-10-08,High,Technical,Engineering,Sustainable Energy Storage Systems,New Training,Energy Storage Engineers,8,Battery technology advancement,2025,Research,Energy Storage,Battery Technology
+LNA064,2025-10-12,Low,Soft Skills,All Departments,Effective Communication in Digital Age,Refresher,All Employees,310,Communication modernization program,2025,Communications,Internal Communications,Digital Communication
+LNA065,2025-10-15,High,Technical,Finance,Decentralized Finance (DeFi) Systems,New Training,Blockchain Analysts,3,Next-generation financial services,2025,Finance,Blockchain Finance,DeFi Development
+LNA066,2025-10-18,Medium,Technical,IT & Digital,API Design & Management,New Training,API Engineers,39,API-first architecture implementation,2025,Technology,API Management,Integration Services
+LNA067,2025-10-22,High,Leadership,Management,Crisis Communication & Media Relations,New Training,Communications Team,11,Corporate reputation management,2025,Communications,Public Relations,Crisis Management
+LNA068,2025-10-25,Medium,Technical,Healthcare,AI-Powered Diagnostics,New Training,Medical AI Specialists,22,Healthcare AI implementation,2025,Healthcare,Medical AI,Diagnostic Systems
+LNA069,2025-10-28,Low,Compliance,All Departments,Updated Privacy Regulations,Refresher,All Employees,285,Privacy law compliance update,2025,Legal,Privacy Compliance,Data Protection
+LNA070,2025-11-01,High,Technical,Engineering,Autonomous Vehicle Systems,New Training,Automotive Engineers,43,Self-driving technology development,2025,Automotive,Autonomous Systems,Vehicle Intelligence
+LNA071,2025-11-05,Medium,Soft Skills,Sales & Marketing,Neuromarketing & Consumer Psychology,Upskilling,Marketing Scientists,17,Advanced consumer insights,2025,Marketing,Consumer Research,Behavioral Analytics
+LNA072,2025-11-08,High,Technical,IT & Digital,Computer Vision & Image Recognition,New Training,Computer Vision Engineers,26,Visual AI applications development,2025,Technology,Computer Vision,Image Processing
+LNA073,2025-11-12,Low,Soft Skills,All Departments,Sustainability Awareness & Green Practices,Refresher,All Employees,198,Corporate sustainability culture,2025,Sustainability,Environmental Awareness,Green Initiatives
+LNA074,2025-11-15,High,Technical,Manufacturing,Industry 4.0 Integration,New Training,Digital Manufacturing Specialists,59,Smart manufacturing transformation,2025,Manufacturing,Digital Manufacturing,Industry 4.0
+LNA075,2025-11-18,Medium,Leadership,Management,Data-Driven Decision Making,New Training,Analytics Managers,33,Evidence-based management practices,2025,Analytics,Decision Sciences,Data Strategy
+LNA076,2025-11-22,High,Technical,Finance,Climate Risk Assessment,New Training,Risk Analysts,9,Climate finance risk management,2025,Finance,Climate Risk,Environmental Finance
+LNA077,2025-11-25,Medium,Technical,IT & Digital,Extended Reality (XR) Development,New Training,XR Developers,18,Immersive technology applications,2025,Technology,Extended Reality,XR Innovation
+LNA078,2025-11-28,Low,Compliance,Healthcare,Medical Device Cybersecurity,Refresher,Medical Device Team,45,Healthcare security compliance,2025,Healthcare,Medical Device Security,Cybersecurity Compliance
+LNA079,2025-12-01,High,Technical,Engineering,Space Technology & Satellite Systems,New Training,Aerospace Engineers,12,Space technology capabilities,2025,Aerospace,Space Systems,Satellite Technology
+LNA080,2025-12-05,Medium,Soft Skills,All Departments,Future of Work Adaptation,New Training,Change Champions,78,Workforce transformation readiness,2025,Human Resources,Future of Work,Workforce Development

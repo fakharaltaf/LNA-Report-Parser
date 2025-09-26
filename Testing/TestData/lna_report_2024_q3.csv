@@ -1,0 +1,21 @@
+ID,Submission,Priority,Competency type,Job families,Targeted competencies,Request type,Targeted audience,Estimated trainees,Comment,Year,Division,Department,Section
+LNA041,2024-07-02,High,Technical,IT & Digital,Cloud Security & Compliance,New Training,Cloud Engineers,52,Enhanced cloud security posture,2024,Technology,Cloud Security,Security Architecture
+LNA042,2024-07-05,Medium,Leadership,Management,Digital Transformation Leadership,Upskilling,Department Heads,23,Digital strategy execution,2024,Strategy,Digital Transformation,Change Leadership
+LNA043,2024-07-08,High,Technical,Engineering,Advanced Materials Science,New Training,Materials Engineers,6,Next-generation product development,2024,Research,Materials Engineering,Advanced Materials
+LNA044,2024-07-12,Low,Soft Skills,All Departments,Remote Work & Virtual Collaboration,Refresher,Remote Workers,180,Hybrid work optimization,2024,Operations,Remote Work Strategy,Virtual Teams
+LNA045,2024-07-15,High,Technical,Finance,Algorithmic Trading Systems,New Training,Quantitative Analysts,4,Automated trading platform development,2024,Finance,Quantitative Trading,Algorithmic Systems
+LNA046,2024-07-18,Medium,Technical,IT & Digital,DevSecOps & Security Integration,New Training,DevOps Engineers,27,Security-first development practices,2024,Technology,DevSecOps,Secure Development
+LNA047,2024-07-22,High,Leadership,Management,Innovation Management,New Training,Innovation Leaders,16,Innovation pipeline optimization,2024,Strategy,Innovation Management,Product Innovation
+LNA048,2024-07-25,Medium,Technical,Engineering,Sustainable Engineering Practices,New Training,Environmental Engineers,41,Green technology implementation,2024,Engineering,Environmental Engineering,Sustainability
+LNA049,2024-07-28,Low,Compliance,All Departments,Anti-Money Laundering (AML),Refresher,Financial Services Staff,95,Regulatory compliance update,2024,Compliance,Financial Compliance,AML Operations
+LNA050,2024-08-01,High,Technical,IT & Digital,Containerization & Kubernetes,New Training,Platform Engineers,34,Container orchestration mastery,2024,Technology,Platform Engineering,Container Management
+LNA051,2024-08-05,Medium,Soft Skills,Sales & Marketing,Consultative Selling Techniques,Upskilling,Senior Sales,19,Sales methodology enhancement,2024,Commercial,Sales Excellence,Advanced Sales
+LNA052,2024-08-08,High,Technical,Healthcare,Precision Medicine & Genomics,New Training,Biomedical Researchers,9,Personalized medicine development,2024,Research,Biomedical Research,Genomics Lab
+LNA053,2024-08-12,Low,Soft Skills,All Departments,Ethical Decision Making,Refresher,All Employees,240,Corporate ethics reinforcement,2024,Ethics,Corporate Ethics,Ethical Standards
+LNA054,2024-08-15,High,Technical,Engineering,Advanced Manufacturing Automation,New Training,Manufacturing Engineers,48,Smart factory implementation,2024,Manufacturing,Advanced Manufacturing,Automation Systems
+LNA055,2024-08-18,Medium,Leadership,Management,Strategic Thinking & Planning,New Training,Senior Managers,31,Strategic capability development,2024,Strategy,Strategic Planning,Executive Development
+LNA056,2024-08-22,High,Technical,IT & Digital,Natural Language Processing,New Training,AI Researchers,7,Conversational AI development,2024,Research,Artificial Intelligence,NLP Research
+LNA057,2024-08-25,Medium,Technical,Finance,Real Estate Investment Analysis,New Training,Real Estate Team,12,Property portfolio optimization,2024,Finance,Real Estate Investment,Property Analysis
+LNA058,2024-08-28,Low,Compliance,Manufacturing,Environmental Regulations,Refresher,Plant Operations,67,Environmental compliance training,2024,Environment,Environmental Compliance,Regulatory Training
+LNA059,2024-09-01,High,Technical,IT & Digital,Serverless Architecture & Functions,New Training,Cloud Developers,28,Event-driven architecture implementation,2024,Technology,Serverless Computing,Function Development
+LNA060,2024-09-05,Medium,Soft Skills,All Departments,Cultural Intelligence & Global Mindset,New Training,International Teams,56,Global collaboration enhancement,2024,Global Operations,Cultural Development,International Relations

@@ -1,0 +1,456 @@
+{
+  "test_dataset": "lna_report_2024_q3.csv",
+  "total_entries": 20,
+  "expected_results": [
+    {
+      "id": "LNA041",
+      "submission": "2024-07-02",
+      "priority": "High",
+      "competency": "Cloud Security & Compliance",
+      "estimated_trainees": 52,
+      "competency_classification": "common",
+      "expected_training_type": "In-house",
+      "reasoning": "52 trainees exceeds 50, common competency suitable for in-house",
+      "demand_score": 156,
+      "associated_skills": [
+        "Cloud Security Architecture",
+        "Compliance Frameworks",
+        "Identity and Access Management",
+        "Data Encryption",
+        "Security Monitoring",
+        "Incident Response",
+        "Risk Assessment"
+      ]
+    },
+    {
+      "id": "LNA042",
+      "submission": "2024-07-05",
+      "priority": "Medium",
+      "competency": "Digital Transformation Leadership",
+      "estimated_trainees": 23,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "23 trainees falls in SDP range (11-50)",
+      "demand_score": 46,
+      "associated_skills": [
+        "Digital Strategy Development",
+        "Change Leadership",
+        "Technology Adoption",
+        "Innovation Management",
+        "Cultural Transformation",
+        "Digital Analytics",
+        "Stakeholder Engagement"
+      ]
+    },
+    {
+      "id": "LNA043",
+      "submission": "2024-07-08",
+      "priority": "High",
+      "competency": "Advanced Materials Science",
+      "estimated_trainees": 6,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 18,
+      "associated_skills": [
+        "Nanomaterials",
+        "Smart Materials",
+        "Material Characterization",
+        "Surface Engineering",
+        "Composite Materials",
+        "Material Testing",
+        "Manufacturing Processes"
+      ]
+    },
+    {
+      "id": "LNA044",
+      "submission": "2024-07-12",
+      "priority": "Low",
+      "competency": "Remote Work & Virtual Collaboration",
+      "estimated_trainees": 180,
+      "competency_classification": "common",
+      "expected_training_type": "In-house",
+      "reasoning": "180 trainees exceeds 50, common competency suitable for in-house",
+      "demand_score": 180,
+      "associated_skills": [
+        "Virtual Team Management",
+        "Digital Collaboration Tools",
+        "Remote Communication",
+        "Time Zone Management",
+        "Virtual Meeting Facilitation",
+        "Digital Workspace Setup",
+        "Remote Team Building"
+      ]
+    },
+    {
+      "id": "LNA045",
+      "submission": "2024-07-15",
+      "priority": "High",
+      "competency": "Algorithmic Trading Systems",
+      "estimated_trainees": 4,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 12,
+      "associated_skills": [
+        "Quantitative Analysis",
+        "Algorithm Development",
+        "Market Microstructure",
+        "Risk Management",
+        "High-Frequency Trading",
+        "Backtesting",
+        "Performance Analytics"
+      ]
+    },
+    {
+      "id": "LNA046",
+      "submission": "2024-07-18",
+      "priority": "Medium",
+      "competency": "DevSecOps & Security Integration",
+      "estimated_trainees": 27,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "27 trainees falls in SDP range (11-50)",
+      "demand_score": 54,
+      "associated_skills": [
+        "Security in CI/CD",
+        "Container Security",
+        "Infrastructure Security",
+        "Vulnerability Management",
+        "Security Testing",
+        "Compliance Automation",
+        "Security Monitoring"
+      ]
+    },
+    {
+      "id": "LNA047",
+      "submission": "2024-07-22",
+      "priority": "High",
+      "competency": "Innovation Management",
+      "estimated_trainees": 16,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "16 trainees falls in SDP range (11-50)",
+      "demand_score": 48,
+      "associated_skills": [
+        "Idea Generation Techniques",
+        "Innovation Process Design",
+        "Technology Scouting",
+        "Portfolio Management",
+        "Collaborative Innovation",
+        "Innovation Metrics",
+        "Cultural Change"
+      ]
+    },
+    {
+      "id": "LNA048",
+      "submission": "2024-07-25",
+      "priority": "Medium",
+      "competency": "Sustainable Engineering Practices",
+      "estimated_trainees": 41,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 82,
+      "associated_skills": [
+        "Life Cycle Assessment",
+        "Green Design Principles",
+        "Circular Economy",
+        "Energy Efficiency",
+        "Waste Reduction",
+        "Sustainable Materials",
+        "Environmental Impact"
+      ]
+    },
+    {
+      "id": "LNA049",
+      "submission": "2024-07-28",
+      "priority": "Low",
+      "competency": "Anti-Money Laundering (AML)",
+      "estimated_trainees": 95,
+      "competency_classification": "common",
+      "expected_training_type": "In-house",
+      "reasoning": "95 trainees exceeds 50, common competency suitable for in-house",
+      "demand_score": 95,
+      "associated_skills": [
+        "Suspicious Activity Recognition",
+        "Customer Due Diligence",
+        "Transaction Monitoring",
+        "Regulatory Reporting",
+        "Risk Assessment",
+        "Compliance Testing",
+        "Training and Awareness"
+      ]
+    },
+    {
+      "id": "LNA050",
+      "submission": "2024-08-01",
+      "priority": "High",
+      "competency": "Containerization & Kubernetes",
+      "estimated_trainees": 34,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "34 trainees falls in SDP range (11-50)",
+      "demand_score": 102,
+      "associated_skills": [
+        "Docker Containerization",
+        "Kubernetes Orchestration",
+        "Container Security",
+        "Service Mesh",
+        "CI/CD Integration",
+        "Monitoring and Logging",
+        "Scaling and Management"
+      ]
+    },
+    {
+      "id": "LNA051",
+      "submission": "2024-08-05",
+      "priority": "Medium",
+      "competency": "Consultative Selling Techniques",
+      "estimated_trainees": 19,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "19 trainees falls in SDP range (11-50)",
+      "demand_score": 38,
+      "associated_skills": [
+        "Needs Assessment",
+        "Solution Selling",
+        "Questioning Techniques",
+        "Relationship Building",
+        "Value Proposition",
+        "Objection Handling",
+        "Closing Strategies"
+      ]
+    },
+    {
+      "id": "LNA052",
+      "submission": "2024-08-08",
+      "priority": "High",
+      "competency": "Precision Medicine & Genomics",
+      "estimated_trainees": 9,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 27,
+      "associated_skills": [
+        "Genomic Analysis",
+        "Personalized Treatment",
+        "Biomarker Discovery",
+        "Clinical Genomics",
+        "Pharmacogenomics",
+        "Genetic Counseling",
+        "Ethical Considerations"
+      ]
+    },
+    {
+      "id": "LNA053",
+      "submission": "2024-08-12",
+      "priority": "Low",
+      "competency": "Ethical Decision Making",
+      "estimated_trainees": 240,
+      "competency_classification": "common",
+      "expected_training_type": "In-house",
+      "reasoning": "240 trainees exceeds 50, common competency suitable for in-house",
+      "demand_score": 240,
+      "associated_skills": [
+        "Ethical Frameworks",
+        "Moral Reasoning",
+        "Stakeholder Analysis",
+        "Dilemma Resolution",
+        "Values Alignment",
+        "Integrity Building",
+        "Ethical Leadership"
+      ]
+    },
+    {
+      "id": "LNA054",
+      "submission": "2024-08-15",
+      "priority": "High",
+      "competency": "Advanced Manufacturing Automation",
+      "estimated_trainees": 48,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 144,
+      "associated_skills": [
+        "Industrial IoT",
+        "Smart Manufacturing",
+        "Predictive Maintenance",
+        "Quality Control Systems",
+        "Process Optimization",
+        "Human-Machine Interface",
+        "Data Analytics"
+      ]
+    },
+    {
+      "id": "LNA055",
+      "submission": "2024-08-18",
+      "priority": "Medium",
+      "competency": "Strategic Thinking & Planning",
+      "estimated_trainees": 31,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "31 trainees falls in SDP range (11-50)",
+      "demand_score": 62,
+      "associated_skills": [
+        "Strategic Analysis",
+        "Future Visioning",
+        "Scenario Planning",
+        "Competitive Intelligence",
+        "Strategic Implementation",
+        "Performance Metrics",
+        "Strategic Communication"
+      ]
+    },
+    {
+      "id": "LNA056",
+      "submission": "2024-08-22",
+      "priority": "High",
+      "competency": "Natural Language Processing",
+      "estimated_trainees": 7,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 21,
+      "associated_skills": [
+        "Text Processing",
+        "Language Models",
+        "Sentiment Analysis",
+        "Information Extraction",
+        "Machine Translation",
+        "Speech Recognition",
+        "Conversational AI"
+      ]
+    },
+    {
+      "id": "LNA057",
+      "submission": "2024-08-25",
+      "priority": "Medium",
+      "competency": "Real Estate Investment Analysis",
+      "estimated_trainees": 12,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "12 trainees falls in SDP range (11-50)",
+      "demand_score": 24,
+      "associated_skills": [
+        "Property Valuation",
+        "Market Analysis",
+        "Financial Modeling",
+        "Risk Assessment",
+        "Investment Strategies",
+        "Due Diligence",
+        "Portfolio Management"
+      ]
+    },
+    {
+      "id": "LNA058",
+      "submission": "2024-08-28",
+      "priority": "Low",
+      "competency": "Environmental Regulations",
+      "estimated_trainees": 67,
+      "competency_classification": "common",
+      "expected_training_type": "In-house",
+      "reasoning": "67 trainees exceeds 50, common competency suitable for in-house",
+      "demand_score": 67,
+      "associated_skills": [
+        "Environmental Law Understanding",
+        "Waste Management",
+        "Emissions Monitoring",
+        "Environmental Impact Assessment",
+        "Sustainability Reporting",
+        "Green Technology",
+        "Compliance Auditing"
+      ]
+    },
+    {
+      "id": "LNA059",
+      "submission": "2024-09-01",
+      "priority": "High",
+      "competency": "Serverless Architecture & Functions",
+      "estimated_trainees": 28,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 84,
+      "associated_skills": [
+        "Function as a Service",
+        "Event-Driven Architecture",
+        "API Gateway",
+        "Microservices Integration",
+        "Cost Optimization",
+        "Performance Monitoring",
+        "Security Best Practices"
+      ]
+    },
+    {
+      "id": "LNA060",
+      "submission": "2024-09-05",
+      "priority": "Medium",
+      "competency": "Cultural Intelligence & Global Mindset",
+      "estimated_trainees": 56,
+      "competency_classification": "common",
+      "expected_training_type": "In-house",
+      "reasoning": "56 trainees exceeds 50, common competency suitable for in-house",
+      "demand_score": 112,
+      "associated_skills": [
+        "Cultural Awareness",
+        "Global Business Practices",
+        "Cross-Cultural Leadership",
+        "International Communication",
+        "Cultural Adaptation",
+        "Global Team Management",
+        "Multicultural Competence"
+      ]
+    }
+  ],
+  "summary_statistics": {
+    "training_type_distribution": {
+      "In-house": 6,
+      "SDP": 14,
+      "External": 0
+    },
+    "priority_distribution": {
+      "High": 8,
+      "Medium": 8,
+      "Low": 4
+    },
+    "competency_type_distribution": {
+      "niche": 8,
+      "common": 12
+    },
+    "total_trainees": 1190,
+    "average_trainees_per_entry": 59.5,
+    "competencies_ranked_by_demand": [
+      {
+        "rank": 1,
+        "competency": "Ethical Decision Making",
+        "demand_score": 240,
+        "training_type": "In-house"
+      },
+      {
+        "rank": 2,
+        "competency": "Remote Work & Virtual Collaboration",
+        "demand_score": 180,
+        "training_type": "In-house"
+      },
+      {
+        "rank": 3,
+        "competency": "Cloud Security & Compliance",
+        "demand_score": 156,
+        "training_type": "In-house"
+      },
+      {
+        "rank": 4,
+        "competency": "Advanced Manufacturing Automation",
+        "demand_score": 144,
+        "training_type": "SDP"
+      },
+      {
+        "rank": 5,
+        "competency": "Cultural Intelligence & Global Mindset",
+        "demand_score": 112,
+        "training_type": "In-house"
+      }
+    ]
+  }
+}

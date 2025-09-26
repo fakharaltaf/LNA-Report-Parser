@@ -1,0 +1,353 @@
+{
+  "test_suite_name": "LNA AI Bot Validation Suite",
+  "version": "1.0",
+  "created_date": "2025-09-26",
+  "description": "Comprehensive test suite for validating LNA AI bot performance against expected outcomes",
+  
+  "test_datasets": [
+    {
+      "dataset_name": "Q1 2024",
+      "file_path": "TestData/lna_report_2024_q1.csv",
+      "expected_results_path": "ExpectedResults/lna_q1_2024_expected_results.json",
+      "total_records": 20,
+      "key_characteristics": {
+        "largest_group": 280,
+        "smallest_group": 3,
+        "niche_competencies": 6,
+        "common_competencies": 14,
+        "high_priority": 10,
+        "medium_priority": 6,
+        "low_priority": 4
+      }
+    },
+    {
+      "dataset_name": "Q2 2024", 
+      "file_path": "TestData/lna_report_2024_q2.csv",
+      "expected_results_path": "ExpectedResults/lna_q2_2024_expected_results.json",
+      "total_records": 20,
+      "key_characteristics": {
+        "largest_group": 320,
+        "smallest_group": 5,
+        "niche_competencies": 9,
+        "common_competencies": 11,
+        "high_priority": 8,
+        "medium_priority": 7,
+        "low_priority": 5
+      }
+    },
+    {
+      "dataset_name": "Q3 2024",
+      "file_path": "TestData/lna_report_2024_q3.csv", 
+      "expected_results_path": "ExpectedResults/lna_q3_2024_expected_results.json",
+      "total_records": 20,
+      "key_characteristics": {
+        "largest_group": 240,
+        "smallest_group": 4,
+        "niche_competencies": 8,
+        "common_competencies": 12,
+        "high_priority": 8,
+        "medium_priority": 8,
+        "low_priority": 4
+      }
+    },
+    {
+      "dataset_name": "Q4 2024 & 2025 Preview",
+      "file_path": "TestData/lna_report_2024_q4_2025_preview.csv",
+      "expected_results_path": "ExpectedResults/lna_q4_2025_expected_results.json", 
+      "total_records": 20,
+      "key_characteristics": {
+        "largest_group": 310,
+        "smallest_group": 3,
+        "niche_competencies": 14,
+        "common_competencies": 6,
+        "high_priority": 8,
+        "medium_priority": 7,
+        "low_priority": 5
+      }
+    }
+  ],
+
+  "validation_tests": {
+    "training_type_logic": {
+      "description": "Validates correct training type assignment based on business rules",
+      "critical": true,
+      "test_cases": [
+        {
+          "case_id": "TT001",
+          "description": "Large group, common competency → In-house",
+          "test_records": ["LNA004", "LNA009", "LNA013", "LNA021", "LNA029"],
+          "expected_result": "In-house",
+          "validation_rule": "trainees > 50 AND competency_type = 'common'"
+        },
+        {
+          "case_id": "TT002", 
+          "description": "Niche competency → SDP (regardless of size)",
+          "test_records": ["LNA003", "LNA008", "LNA010", "LNA025", "LNA026"],
+          "expected_result": "SDP",
+          "validation_rule": "competency_type = 'niche'"
+        },
+        {
+          "case_id": "TT003",
+          "description": "Small group, common competency → External", 
+          "test_records": ["LNA005", "LNA016"],
+          "expected_result": "External",
+          "validation_rule": "trainees ≤ 10 AND competency_type = 'common'"
+        },
+        {
+          "case_id": "TT004",
+          "description": "Medium group, common competency → SDP",
+          "test_records": ["LNA002", "LNA006", "LNA007", "LNA011", "LNA014"],
+          "expected_result": "SDP", 
+          "validation_rule": "11 ≤ trainees ≤ 50 AND competency_type = 'common'"
+        },
+        {
+          "case_id": "TT005",
+          "description": "Large niche competency → In-house (override)",
+          "test_records": ["LNA061", "LNA074"],
+          "expected_result": "In-house",
+          "validation_rule": "trainees > 50 AND competency_type = 'niche'"
+        }
+      ]
+    },
+
+    "demand_score_calculation": {
+      "description": "Validates demand score calculation accuracy",
+      "critical": true,
+      "formula": "priority_weight × trainee_count",
+      "priority_weights": {"High": 3, "Medium": 2, "Low": 1},
+      "test_cases": [
+        {
+          "case_id": "DS001",
+          "record_id": "LNA001",
+          "priority": "High",
+          "trainees": 45,
+          "expected_score": 135,
+          "calculation": "3 × 45 = 135"
+        },
+        {
+          "case_id": "DS002", 
+          "record_id": "LNA004",
+          "priority": "Low",
+          "trainees": 150,
+          "expected_score": 150,
+          "calculation": "1 × 150 = 150"
+        },
+        {
+          "case_id": "DS003",
+          "record_id": "LNA022",
+          "priority": "Medium",
+          "trainees": 24,
+          "expected_score": 48,
+          "calculation": "2 × 24 = 48"
+        }
+      ]
+    },
+
+    "skills_mapping_accuracy": {
+      "description": "Validates that correct skills are returned for each competency",
+      "critical": true,
+      "reference_file": "Configuration/skills_mapping.md",
+      "test_cases": [
+        {
+          "case_id": "SM001",
+          "competency": "Cloud Computing & DevOps",
+          "expected_skill_count": 7,
+          "sample_skills": [
+            "AWS/Azure/GCP Platform Management",
+            "Container Orchestration (Docker, Kubernetes)",
+            "Infrastructure as Code (Terraform, CloudFormation)"
+          ]
+        },
+        {
+          "case_id": "SM002",
+          "competency": "Blockchain Technology", 
+          "expected_skill_count": 7,
+          "sample_skills": [
+            "Distributed Ledger Technology",
+            "Smart Contract Development",
+            "Cryptocurrency Fundamentals"
+          ]
+        },
+        {
+          "case_id": "SM003",
+          "competency": "Communication & Presentation Skills",
+          "expected_skill_count": 7,
+          "sample_skills": [
+            "Public Speaking",
+            "Written Communication",
+            "Active Listening"
+          ]
+        }
+      ]
+    },
+
+    "competency_classification": {
+      "description": "Validates correct niche vs common classification",
+      "critical": true,
+      "reference_file": "Configuration/competency_classification.md",
+      "test_cases": [
+        {
+          "case_id": "CC001",
+          "classification": "niche",
+          "sample_competencies": [
+            "Quantum Computing Fundamentals",
+            "Blockchain Technology", 
+            "Advanced Data Analytics",
+            "Machine Learning & AI",
+            "3D Printing & Additive Manufacturing"
+          ]
+        },
+        {
+          "case_id": "CC002",
+          "classification": "common",
+          "sample_competencies": [
+            "Communication & Presentation Skills",
+            "Strategic Planning & Decision Making",
+            "Project Management Certification",
+            "Data Privacy & GDPR",
+            "Time Management & Productivity"
+          ]
+        }
+      ]
+    },
+
+    "ranking_validation": {
+      "description": "Validates competency ranking by demand score",
+      "critical": false,
+      "tolerance": "95%",
+      "test_cases": [
+        {
+          "case_id": "RK001",
+          "dataset": "Q1 2024",
+          "expected_top_5": [
+            {"rank": 1, "competency": "Data Privacy & GDPR", "demand_score": 280},
+            {"rank": 2, "competency": "Time Management & Productivity", "demand_score": 195},
+            {"rank": 3, "competency": "Communication & Presentation Skills", "demand_score": 150},
+            {"rank": 4, "competency": "Cloud Computing & DevOps", "demand_score": 135},
+            {"rank": 5, "competency": "Renewable Energy Systems", "demand_score": 93}
+          ]
+        },
+        {
+          "case_id": "RK002",
+          "dataset": "Q2 2024",
+          "expected_top_5": [
+            {"rank": 1, "competency": "Workplace Safety & Health", "demand_score": 320},
+            {"rank": 2, "competency": "Diversity & Inclusion Awareness", "demand_score": 275},
+            {"rank": 3, "competency": "Lean Manufacturing & Six Sigma", "demand_score": 195},
+            {"rank": 4, "competency": "Mental Health & Wellness", "demand_score": 178},
+            {"rank": 5, "competency": "Microservices Architecture", "demand_score": 108}
+          ]
+        }
+      ]
+    },
+
+    "summary_statistics": {
+      "description": "Validates dataset summary calculations",
+      "critical": true,
+      "test_cases": [
+        {
+          "case_id": "SS001",
+          "dataset": "Q1 2024", 
+          "expected_totals": {
+            "total_trainees": 1051,
+            "average_trainees": 52.55,
+            "in_house_count": 3,
+            "sdp_count": 15,
+            "external_count": 2
+          }
+        },
+        {
+          "case_id": "SS002",
+          "dataset": "Q2 2024",
+          "expected_totals": {
+            "total_trainees": 1141,
+            "average_trainees": 57.05,
+            "in_house_count": 4,
+            "sdp_count": 16,
+            "external_count": 0
+          }
+        }
+      ]
+    }
+  },
+
+  "error_handling_tests": {
+    "invalid_data": {
+      "description": "Tests bot behavior with invalid or missing data",
+      "test_cases": [
+        {
+          "case_id": "EH001",
+          "scenario": "Missing priority field",
+          "expected_behavior": "Error with descriptive message"
+        },
+        {
+          "case_id": "EH002", 
+          "scenario": "Negative trainee count",
+          "expected_behavior": "Error with validation message"
+        },
+        {
+          "case_id": "EH003",
+          "scenario": "Unknown competency",
+          "expected_behavior": "Warning with default classification"
+        }
+      ]
+    },
+    
+    "edge_cases": {
+      "description": "Tests bot behavior at boundary conditions",
+      "test_cases": [
+        {
+          "case_id": "EC001",
+          "scenario": "Exactly 10 trainees",
+          "expected_result": "External (≤ 10 rule)"
+        },
+        {
+          "case_id": "EC002",
+          "scenario": "Exactly 11 trainees", 
+          "expected_result": "SDP (11-50 rule)"
+        },
+        {
+          "case_id": "EC003",
+          "scenario": "Exactly 50 trainees",
+          "expected_result": "SDP (11-50 rule)"
+        },
+        {
+          "case_id": "EC004",
+          "scenario": "Exactly 51 trainees",
+          "expected_result": "In-house (> 50 rule)"
+        }
+      ]
+    }
+  },
+
+  "performance_benchmarks": {
+    "response_time": {
+      "single_record_processing": "< 2 seconds",
+      "full_dataset_processing": "< 30 seconds", 
+      "skills_lookup": "< 1 second"
+    },
+    "accuracy_targets": {
+      "training_type_accuracy": "100%",
+      "skills_mapping_accuracy": "100%",
+      "demand_score_accuracy": "100%",
+      "ranking_accuracy": "95%"
+    }
+  },
+
+  "test_execution_order": [
+    "competency_classification",
+    "skills_mapping_accuracy", 
+    "demand_score_calculation",
+    "training_type_logic",
+    "summary_statistics",
+    "ranking_validation",
+    "error_handling_tests"
+  ],
+
+  "success_criteria": {
+    "critical_tests_pass_rate": "100%",
+    "non_critical_tests_pass_rate": "95%",
+    "performance_benchmarks_met": "100%",
+    "error_handling_coverage": "100%"
+  }
+}

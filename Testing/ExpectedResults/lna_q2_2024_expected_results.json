@@ -1,0 +1,456 @@
+{
+  "test_dataset": "lna_report_2024_q2.csv",
+  "total_entries": 20,
+  "expected_results": [
+    {
+      "id": "LNA021",
+      "submission": "2024-04-02",
+      "priority": "High",
+      "competency": "Lean Manufacturing & Six Sigma",
+      "estimated_trainees": 65,
+      "competency_classification": "common",
+      "expected_training_type": "In-house",
+      "reasoning": "65 trainees exceeds 50, common competency suitable for in-house",
+      "demand_score": 195,
+      "associated_skills": [
+        "Process Mapping",
+        "Statistical Process Control",
+        "Root Cause Analysis",
+        "Waste Elimination",
+        "Continuous Improvement",
+        "Quality Tools",
+        "Project Management"
+      ]
+    },
+    {
+      "id": "LNA022",
+      "submission": "2024-04-05",
+      "priority": "Medium",
+      "competency": "Project Management Certification",
+      "estimated_trainees": 24,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "24 trainees falls in SDP range (11-50)",
+      "demand_score": 48,
+      "associated_skills": [
+        "Project Planning and Scheduling",
+        "Resource Management",
+        "Risk Management",
+        "Quality Assurance",
+        "Stakeholder Communication",
+        "Budget Management",
+        "Agile Methodologies"
+      ]
+    },
+    {
+      "id": "LNA023",
+      "submission": "2024-04-08",
+      "priority": "High",
+      "competency": "Mobile App Development",
+      "estimated_trainees": 11,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "11 trainees falls in SDP range (11-50)",
+      "demand_score": 33,
+      "associated_skills": [
+        "iOS Development (Swift)",
+        "Android Development (Kotlin/Java)",
+        "Cross-platform Frameworks",
+        "Mobile UI/UX Design",
+        "App Store Optimization",
+        "Mobile Security",
+        "Performance Optimization"
+      ]
+    },
+    {
+      "id": "LNA024",
+      "submission": "2024-04-12",
+      "priority": "Low",
+      "competency": "Conflict Resolution & De-escalation",
+      "estimated_trainees": 38,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "38 trainees falls in SDP range (11-50)",
+      "demand_score": 38,
+      "associated_skills": [
+        "Active Listening",
+        "Mediation Techniques",
+        "Emotional Regulation",
+        "Communication Skills",
+        "Problem-Solving",
+        "Negotiation Skills",
+        "Stress Management"
+      ]
+    },
+    {
+      "id": "LNA025",
+      "submission": "2024-04-15",
+      "priority": "High",
+      "competency": "3D Printing & Additive Manufacturing",
+      "estimated_trainees": 7,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 21,
+      "associated_skills": [
+        "CAD Design",
+        "Material Selection",
+        "Printing Technologies",
+        "Post-processing Techniques",
+        "Quality Control",
+        "Design for Manufacturing",
+        "Cost Optimization"
+      ]
+    },
+    {
+      "id": "LNA026",
+      "submission": "2024-04-18",
+      "priority": "Medium",
+      "competency": "Cryptocurrency & Digital Assets",
+      "estimated_trainees": 5,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 10,
+      "associated_skills": [
+        "Blockchain Fundamentals",
+        "Digital Wallet Management",
+        "Trading Strategies",
+        "Risk Assessment",
+        "Regulatory Compliance",
+        "Security Best Practices",
+        "Portfolio Management"
+      ]
+    },
+    {
+      "id": "LNA027",
+      "submission": "2024-04-22",
+      "priority": "High",
+      "competency": "Crisis Management & Business Continuity",
+      "estimated_trainees": 15,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "15 trainees falls in SDP range (11-50)",
+      "demand_score": 45,
+      "associated_skills": [
+        "Crisis Assessment",
+        "Emergency Response Planning",
+        "Communication Strategies",
+        "Recovery Planning",
+        "Risk Mitigation",
+        "Leadership Under Pressure",
+        "Stakeholder Coordination"
+      ]
+    },
+    {
+      "id": "LNA028",
+      "submission": "2024-04-25",
+      "priority": "Medium",
+      "competency": "Artificial Intelligence Ethics",
+      "estimated_trainees": 19,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 38,
+      "associated_skills": [
+        "Bias Detection and Mitigation",
+        "Fairness in AI Systems",
+        "Privacy-Preserving Techniques",
+        "Explainable AI",
+        "Regulatory Compliance",
+        "Ethical Decision Frameworks",
+        "Stakeholder Engagement"
+      ]
+    },
+    {
+      "id": "LNA029",
+      "submission": "2024-04-28",
+      "priority": "Low",
+      "competency": "Workplace Safety & Health",
+      "estimated_trainees": 320,
+      "competency_classification": "common",
+      "expected_training_type": "In-house",
+      "reasoning": "320 trainees exceeds 50, common competency suitable for in-house",
+      "demand_score": 320,
+      "associated_skills": [
+        "Risk Assessment",
+        "Safety Procedures",
+        "Emergency Response",
+        "Incident Investigation",
+        "Safety Training",
+        "Regulatory Compliance",
+        "Safety Culture"
+      ]
+    },
+    {
+      "id": "LNA030",
+      "submission": "2024-05-02",
+      "priority": "High",
+      "competency": "Robotics & Automation",
+      "estimated_trainees": 29,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 87,
+      "associated_skills": [
+        "Robot Programming",
+        "Sensor Integration",
+        "Control Systems",
+        "Safety Systems",
+        "Human-Robot Interaction",
+        "Maintenance and Troubleshooting",
+        "Process Optimization"
+      ]
+    },
+    {
+      "id": "LNA031",
+      "submission": "2024-05-05",
+      "priority": "Medium",
+      "competency": "Digital Marketing & Social Media",
+      "estimated_trainees": 33,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "33 trainees falls in SDP range (11-50)",
+      "demand_score": 66,
+      "associated_skills": [
+        "Social Media Strategy",
+        "Content Marketing",
+        "SEO/SEM",
+        "Analytics and Reporting",
+        "Paid Advertising",
+        "Influencer Marketing",
+        "Marketing Automation"
+      ]
+    },
+    {
+      "id": "LNA032",
+      "submission": "2024-05-08",
+      "priority": "High",
+      "competency": "Edge Computing & 5G Networks",
+      "estimated_trainees": 13,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 39,
+      "associated_skills": [
+        "Edge Architecture Design",
+        "5G Network Protocols",
+        "Low Latency Computing",
+        "Network Slicing",
+        "Edge Security",
+        "IoT Integration",
+        "Performance Optimization"
+      ]
+    },
+    {
+      "id": "LNA033",
+      "submission": "2024-05-12",
+      "priority": "Low",
+      "competency": "Diversity & Inclusion Awareness",
+      "estimated_trainees": 275,
+      "competency_classification": "common",
+      "expected_training_type": "In-house",
+      "reasoning": "275 trainees exceeds 50, common competency suitable for in-house",
+      "demand_score": 275,
+      "associated_skills": [
+        "Cultural Sensitivity",
+        "Unconscious Bias Recognition",
+        "Inclusive Leadership",
+        "Diverse Team Management",
+        "Equal Opportunity Practices",
+        "Accessibility Awareness",
+        "Inclusive Communication"
+      ]
+    },
+    {
+      "id": "LNA034",
+      "submission": "2024-05-15",
+      "priority": "High",
+      "competency": "Telemedicine & Digital Health",
+      "estimated_trainees": 21,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 63,
+      "associated_skills": [
+        "Remote Patient Monitoring",
+        "Digital Health Platforms",
+        "Healthcare Regulations",
+        "Patient Data Security",
+        "Clinical Decision Support",
+        "Health Information Systems",
+        "Digital Therapeutics"
+      ]
+    },
+    {
+      "id": "LNA035",
+      "submission": "2024-05-18",
+      "priority": "Medium",
+      "competency": "Agile Leadership & Scrum Mastery",
+      "estimated_trainees": 17,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "17 trainees falls in SDP range (11-50)",
+      "demand_score": 34,
+      "associated_skills": [
+        "Scrum Framework",
+        "Agile Coaching",
+        "Sprint Planning",
+        "Backlog Management",
+        "Team Facilitation",
+        "Continuous Improvement",
+        "Agile Metrics"
+      ]
+    },
+    {
+      "id": "LNA036",
+      "submission": "2024-05-22",
+      "priority": "High",
+      "competency": "ESG Reporting & Sustainability Metrics",
+      "estimated_trainees": 8,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 24,
+      "associated_skills": [
+        "ESG Framework Understanding",
+        "Sustainability Reporting",
+        "Carbon Footprint Analysis",
+        "Social Impact Measurement",
+        "Governance Metrics",
+        "Stakeholder Engagement",
+        "Regulatory Compliance"
+      ]
+    },
+    {
+      "id": "LNA037",
+      "submission": "2024-05-25",
+      "priority": "Medium",
+      "competency": "Virtual Reality & Augmented Reality",
+      "estimated_trainees": 14,
+      "competency_classification": "niche",
+      "expected_training_type": "SDP",
+      "reasoning": "Niche competency requires SDP regardless of trainee count",
+      "demand_score": 28,
+      "associated_skills": [
+        "VR/AR Development",
+        "3D Modeling",
+        "User Experience Design",
+        "Spatial Computing",
+        "Hardware Integration",
+        "Performance Optimization",
+        "Content Creation"
+      ]
+    },
+    {
+      "id": "LNA038",
+      "submission": "2024-05-28",
+      "priority": "Low",
+      "competency": "ISO Quality Standards",
+      "estimated_trainees": 26,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "26 trainees falls in SDP range (11-50)",
+      "demand_score": 26,
+      "associated_skills": [
+        "Quality Management Systems",
+        "Process Documentation",
+        "Audit Procedures",
+        "Continuous Improvement",
+        "Risk Management",
+        "Compliance Monitoring",
+        "Corrective Actions"
+      ]
+    },
+    {
+      "id": "LNA039",
+      "submission": "2024-06-01",
+      "priority": "High",
+      "competency": "Microservices Architecture",
+      "estimated_trainees": 36,
+      "competency_classification": "common",
+      "expected_training_type": "SDP",
+      "reasoning": "36 trainees falls in SDP range (11-50)",
+      "demand_score": 108,
+      "associated_skills": [
+        "Service Design Patterns",
+        "API Development",
+        "Container Technologies",
+        "Service Mesh",
+        "Monitoring and Observability",
+        "Security Patterns",
+        "Performance Optimization"
+      ]
+    },
+    {
+      "id": "LNA040",
+      "submission": "2024-06-05",
+      "priority": "Medium",
+      "competency": "Mental Health & Wellness",
+      "estimated_trainees": 89,
+      "competency_classification": "common",
+      "expected_training_type": "In-house",
+      "reasoning": "89 trainees exceeds 50, common competency suitable for in-house",
+      "demand_score": 178,
+      "associated_skills": [
+        "Stress Recognition",
+        "Coping Strategies",
+        "Resilience Building",
+        "Support System Development",
+        "Work-Life Integration",
+        "Mindfulness Techniques",
+        "Team Wellness"
+      ]
+    }
+  ],
+  "summary_statistics": {
+    "training_type_distribution": {
+      "In-house": 4,
+      "SDP": 16,
+      "External": 0
+    },
+    "priority_distribution": {
+      "High": 8,
+      "Medium": 7,
+      "Low": 5
+    },
+    "competency_type_distribution": {
+      "niche": 9,
+      "common": 11
+    },
+    "total_trainees": 1141,
+    "average_trainees_per_entry": 57.05,
+    "competencies_ranked_by_demand": [
+      {
+        "rank": 1,
+        "competency": "Workplace Safety & Health",
+        "demand_score": 320,
+        "training_type": "In-house"
+      },
+      {
+        "rank": 2,
+        "competency": "Diversity & Inclusion Awareness",
+        "demand_score": 275,
+        "training_type": "In-house"
+      },
+      {
+        "rank": 3,
+        "competency": "Lean Manufacturing & Six Sigma",
+        "demand_score": 195,
+        "training_type": "In-house"
+      },
+      {
+        "rank": 4,
+        "competency": "Mental Health & Wellness",
+        "demand_score": 178,
+        "training_type": "In-house"
+      },
+      {
+        "rank": 5,
+        "competency": "Microservices Architecture",
+        "demand_score": 108,
+        "training_type": "SDP"
+      }
+    ]
+  }
+}

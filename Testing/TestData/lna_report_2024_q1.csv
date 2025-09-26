@@ -1,0 +1,21 @@
+ID,Submission,Priority,Competency type,Job families,Targeted competencies,Request type,Targeted audience,Estimated trainees,Comment,Year,Division,Department,Section
+LNA001,2024-01-15,High,Technical,IT & Digital,Cloud Computing & DevOps,New Training,Software Engineers,45,Critical for digital transformation initiative,2024,Technology,IT Operations,Cloud Infrastructure
+LNA002,2024-01-18,Medium,Leadership,Management,Strategic Planning & Decision Making,Upskilling,Team Leaders,12,Required for upcoming organizational restructure,2024,Operations,Human Resources,Leadership Development
+LNA003,2024-01-22,High,Technical,Engineering,Advanced Data Analytics,New Training,Data Scientists,8,Specialized skills for AI project implementation,2024,Technology,Data Science,Analytics Team
+LNA004,2024-01-25,Low,Soft Skills,All Departments,Communication & Presentation Skills,Refresher,All Employees,150,Company-wide communication improvement initiative,2024,Corporate,Training & Development,Learning Center
+LNA005,2024-02-01,High,Technical,Finance,Financial Risk Assessment,New Training,Risk Analysts,6,Regulatory compliance requirement,2024,Finance,Risk Management,Credit Risk
+LNA006,2024-02-05,Medium,Technical,IT & Digital,Cybersecurity & Information Security,Upskilling,IT Security Team,25,Enhanced security measures implementation,2024,Technology,Information Security,Security Operations
+LNA007,2024-02-08,High,Leadership,Management,Change Management,New Training,Senior Managers,18,Major organizational change initiative,2024,Operations,Change Management,Strategic Planning
+LNA008,2024-02-12,Medium,Technical,Engineering,Machine Learning & AI,New Training,ML Engineers,35,AI capability development program,2024,Technology,Research & Development,AI Innovation Lab
+LNA009,2024-02-15,Low,Compliance,All Departments,Data Privacy & GDPR,Refresher,All Employees,280,Annual compliance training requirement,2024,Legal,Compliance,Regulatory Affairs
+LNA010,2024-02-18,High,Technical,IT & Digital,Blockchain Technology,New Training,Blockchain Developers,4,Innovative payment system development,2024,Technology,Innovation Lab,Emerging Technologies
+LNA011,2024-02-22,Medium,Soft Skills,Sales & Marketing,Customer Relationship Management,Upskilling,Sales Team,22,Customer satisfaction improvement program,2024,Commercial,Sales,Customer Success
+LNA012,2024-02-25,High,Technical,Engineering,IoT & Embedded Systems,New Training,Hardware Engineers,12,Smart device product line expansion,2024,Technology,Product Development,Hardware Engineering
+LNA013,2024-03-01,Low,Soft Skills,All Departments,Time Management & Productivity,Refresher,All Employees,195,Productivity enhancement initiative,2024,Operations,Organizational Development,Performance Management
+LNA014,2024-03-05,High,Technical,Finance,Advanced Excel & Financial Modeling,New Training,Financial Analysts,16,Complex financial analysis requirements,2024,Finance,Financial Planning,Business Analysis
+LNA015,2024-03-08,Medium,Leadership,Management,Emotional Intelligence & Team Dynamics,New Training,Team Leaders,28,Leadership effectiveness program,2024,Operations,Human Resources,Leadership Development
+LNA016,2024-03-12,High,Technical,IT & Digital,Database Administration & Optimization,New Training,Database Administrators,9,Performance optimization project,2024,Technology,Database Management,Systems Administration
+LNA017,2024-03-15,Low,Compliance,Healthcare,Medical Device Regulations,Refresher,Quality Assurance Team,14,FDA compliance requirement,2024,Quality,Regulatory Affairs,Medical Device QA
+LNA018,2024-03-18,High,Technical,Engineering,Renewable Energy Systems,New Training,Energy Engineers,31,Green energy project development,2024,Engineering,Renewable Energy,Solar & Wind Systems
+LNA019,2024-03-22,Medium,Soft Skills,All Departments,Cross-Cultural Communication,New Training,Global Teams,42,International expansion support,2024,Global Operations,International Relations,Cultural Integration
+LNA020,2024-03-25,High,Technical,IT & Digital,Quantum Computing Fundamentals,New Training,Research Scientists,3,Future technology exploration,2024,Research,Advanced Computing,Quantum Research

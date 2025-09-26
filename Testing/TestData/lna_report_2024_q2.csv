@@ -1,0 +1,21 @@
+ID,Submission,Priority,Competency type,Job families,Targeted competencies,Request type,Targeted audience,Estimated trainees,Comment,Year,Division,Department,Section
+LNA021,2024-04-02,High,Technical,Manufacturing,Lean Manufacturing & Six Sigma,New Training,Production Managers,65,Manufacturing efficiency improvement program,2024,Operations,Manufacturing,Process Optimization
+LNA022,2024-04-05,Medium,Leadership,Management,Project Management Certification,Upskilling,Project Managers,24,PMO standardization initiative,2024,Operations,Project Management Office,PMO Standards
+LNA023,2024-04-08,High,Technical,IT & Digital,Mobile App Development,New Training,Mobile Developers,11,Customer mobile experience enhancement,2024,Technology,Mobile Development,App Engineering
+LNA024,2024-04-12,Low,Soft Skills,Customer Service,Conflict Resolution & De-escalation,Refresher,Customer Support,38,Customer satisfaction improvement,2024,Commercial,Customer Service,Support Operations
+LNA025,2024-04-15,High,Technical,Engineering,3D Printing & Additive Manufacturing,New Training,Design Engineers,7,Rapid prototyping capability development,2024,Engineering,Product Design,Advanced Manufacturing
+LNA026,2024-04-18,Medium,Technical,Finance,Cryptocurrency & Digital Assets,New Training,Investment Team,5,Digital asset portfolio management,2024,Finance,Investment Management,Digital Assets
+LNA027,2024-04-22,High,Leadership,Management,Crisis Management & Business Continuity,New Training,Executive Team,15,Business resilience enhancement,2024,Executive,Strategic Planning,Risk Management
+LNA028,2024-04-25,Medium,Technical,IT & Digital,Artificial Intelligence Ethics,New Training,AI Development Team,19,Responsible AI implementation,2024,Technology,AI Ethics,Responsible Computing
+LNA029,2024-04-28,Low,Compliance,All Departments,Workplace Safety & Health,Refresher,All Employees,320,Annual safety training requirement,2024,Safety,Occupational Health,Safety Management
+LNA030,2024-05-02,High,Technical,Engineering,Robotics & Automation,New Training,Automation Engineers,29,Factory automation project,2024,Engineering,Automation Systems,Robotics Development
+LNA031,2024-05-05,Medium,Soft Skills,Sales & Marketing,Digital Marketing & Social Media,Upskilling,Marketing Team,33,Digital transformation of marketing,2024,Commercial,Digital Marketing,Social Media Strategy
+LNA032,2024-05-08,High,Technical,IT & Digital,Edge Computing & 5G Networks,New Training,Network Engineers,13,Next-generation network infrastructure,2024,Technology,Network Infrastructure,Advanced Networking
+LNA033,2024-05-12,Low,Soft Skills,All Departments,Diversity & Inclusion Awareness,Refresher,All Employees,275,Corporate culture enhancement program,2024,Human Resources,Diversity & Inclusion,Cultural Development
+LNA034,2024-05-15,High,Technical,Healthcare,Telemedicine & Digital Health,New Training,Healthcare Professionals,21,Digital health services expansion,2024,Healthcare,Digital Health,Telehealth Services
+LNA035,2024-05-18,Medium,Leadership,Management,Agile Leadership & Scrum Mastery,New Training,Agile Coaches,17,Agile transformation support,2024,Technology,Agile Center of Excellence,Scrum Training
+LNA036,2024-05-22,High,Technical,Finance,ESG Reporting & Sustainability Metrics,New Training,Sustainability Team,8,Environmental compliance reporting,2024,Finance,Sustainability,ESG Reporting
+LNA037,2024-05-25,Medium,Technical,Engineering,Virtual Reality & Augmented Reality,New Training,UX Designers,14,Immersive experience development,2024,Technology,User Experience,Immersive Design
+LNA038,2024-05-28,Low,Compliance,Manufacturing,ISO Quality Standards,Refresher,Quality Team,26,Quality management system maintenance,2024,Quality,Quality Assurance,Standards Compliance
+LNA039,2024-06-01,High,Technical,IT & Digital,Microservices Architecture,New Training,Software Architects,36,System architecture modernization,2024,Technology,Software Architecture,System Design
+LNA040,2024-06-05,Medium,Soft Skills,All Departments,Mental Health & Wellness,New Training,All Managers,89,Employee wellbeing initiative,2024,Human Resources,Employee Wellness,Mental Health Support
