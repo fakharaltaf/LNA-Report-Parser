@@ -130,10 +130,31 @@ def analyze_csv():
             print(f"... and {len(results) - 10} more records")
         
         # Ask to export
-        export = input(f"\nExport results to JSON? (y/n): ").strip().lower()
+        export = input(f"\nExport results? (y/n): ").strip().lower()
         if export == 'y':
-            output_file = Path(f"outputs/analysis_results/analysis_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
-            bot.export_results_to_json(results, summary, output_file)
+            print("\nSelect export format:")
+            print("1. JSON (detailed structure)")
+            print("2. CSV (tabular format)")
+            print("3. Excel (multi-sheet with analysis)")
+            
+            format_choice = input("Choose format (1-3): ").strip()
+            
+            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+            
+            if format_choice == '1':
+                output_file = Path(f"outputs/analysis_results/analysis_results_{timestamp}.json")
+                bot.export_results_to_json(results, summary, output_file)
+            elif format_choice == '2':
+                output_file = Path(f"outputs/analysis_results/analysis_results_{timestamp}.csv")
+                bot.export_results_to_csv(results, summary, output_file)
+            elif format_choice == '3':
+                output_file = Path(f"outputs/analysis_results/analysis_results_{timestamp}.xlsx")
+                bot.export_results_to_excel(results, summary, output_file)
+            else:
+                print("Invalid choice! Defaulting to JSON.")
+                output_file = Path(f"outputs/analysis_results/analysis_results_{timestamp}.json")
+                bot.export_results_to_json(results, summary, output_file)
+            
             print(f"Results exported to: {output_file}")
         
     except Exception as e:
@@ -343,23 +364,47 @@ def export_analysis():
         results, summary = bot.analyze_csv_file(Path(csv_path))
         
         # Export options
+        print("\nSelect export formats (you can choose multiple):")
+        print("1. JSON (detailed structure)")
+        print("2. CSV (tabular format)")
+        print("3. Excel (multi-sheet with analysis)")
+        print("4. All formats")
+        
+        format_choice = input("Choose format(s) (1-4): ").strip()
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        json_file = Path(f"outputs/analysis_results/lna_analysis_{timestamp}.json")
+        
+        exported_files = []
+        
+        if format_choice == '1' or format_choice == '4':
+            json_file = Path(f"outputs/analysis_results/lna_analysis_{timestamp}.json")
+            bot.export_results_to_json(results, summary, json_file)
+            exported_files.append(("JSON", json_file))
+            print(f"✓ JSON results exported to: {json_file}")
+        
+        if format_choice == '2' or format_choice == '4':
+            csv_file = Path(f"outputs/analysis_results/lna_analysis_{timestamp}.csv")
+            bot.export_results_to_csv(results, summary, csv_file)
+            exported_files.append(("CSV", csv_file))
+            print(f"✓ CSV results exported to: {csv_file}")
+        
+        if format_choice == '3' or format_choice == '4':
+            excel_file = Path(f"outputs/analysis_results/lna_analysis_{timestamp}.xlsx")
+            bot.export_results_to_excel(results, summary, excel_file)
+            exported_files.append(("Excel", excel_file))
+            print(f"✓ Excel results exported to: {excel_file}")
+        
+        # Always export summary text
         summary_file = Path(f"outputs/reports/lna_summary_{timestamp}.txt")
-        
-        # Export JSON
-        bot.export_results_to_json(results, summary, json_file)
-        print(f"✓ JSON results exported to: {json_file}")
-        
-        # Export summary
         summary_text = bot.get_summary_report(summary)
         with open(summary_file, 'w', encoding='utf-8') as f:
             f.write(summary_text)
+        exported_files.append(("Summary", summary_file))
         print(f"✓ Summary report exported to: {summary_file}")
         
         print(f"\nExport complete! Files created:")
-        print(f"• {json_file} ({json_file.stat().st_size} bytes)")
-        print(f"• {summary_file} ({summary_file.stat().st_size} bytes)")
+        for format_type, file_path in exported_files:
+            file_size = file_path.stat().st_size if file_path.exists() else 0
+            print(f"• {format_type}: {file_path} ({file_size} bytes)")
         
     except Exception as e:
         print(f"Error: {str(e)}")
@@ -467,13 +512,37 @@ def test_export_functions():
     
     results, summary = bot.analyze_csv_file(csv_path)
     
-    # Test JSON export
-    test_file = Path("test_export.json")
-    bot.export_results_to_json(results, summary, test_file)
-    success = test_file.exists()
+    # Test all export formats
+    test_files = []
+    success = True
     
-    if success:
-        test_file.unlink()  # Clean up
+    try:
+        # Test JSON export
+        json_file = Path("test_export.json")
+        bot.export_results_to_json(results, summary, json_file)
+        test_files.append(json_file)
+        success = success and json_file.exists()
+        
+        # Test CSV export
+        csv_file = Path("test_export.csv")
+        bot.export_results_to_csv(results, summary, csv_file)
+        test_files.append(csv_file)
+        success = success and csv_file.exists()
+        
+        # Test Excel export
+        excel_file = Path("test_export.xlsx")
+        bot.export_results_to_excel(results, summary, excel_file)
+        test_files.append(excel_file)
+        success = success and excel_file.exists()
+        
+    except Exception as e:
+        print(f"Export test error: {e}")
+        success = False
+    
+    # Clean up test files
+    for test_file in test_files:
+        if test_file.exists():
+            test_file.unlink()
     
     return success
 

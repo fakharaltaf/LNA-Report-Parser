@@ -311,6 +311,186 @@ class LNABot:
             logger.error(f"Failed to export results: {str(e)}")
             raise LNABotError(f"Failed to export results: {str(e)}")
     
+    def export_results_to_csv(self, 
+                              analysis_results: List[LNAAnalysisResult], 
+                              summary: DatasetSummary,
+                              output_file: Path) -> None:
+        """
+        Export analysis results to a CSV file.
+        
+        Args:
+            analysis_results: List of analysis results
+            summary: Dataset summary
+            output_file: Path for the output CSV file
+        """
+        try:
+            import pandas as pd
+            
+            # Convert to dictionaries and then to DataFrame
+            results_dict = self.data_processor.analysis_results_to_dict(analysis_results)
+            df = pd.DataFrame(results_dict)
+            
+            # Reorder columns for better readability
+            column_order = [
+                'id', 'submission', 'priority', 'competency', 'estimated_trainees',
+                'expected_training_type', 'reasoning', 'demand_score',
+                'competency_classification', 'associated_skills',
+                'job_families', 'targeted_audience', 'division', 'department', 'section',
+                'analysis_timestamp'
+            ]
+            
+            # Ensure all expected columns exist, add missing ones with default values
+            for col in column_order:
+                if col not in df.columns:
+                    df[col] = None
+            
+            # Reorder DataFrame columns
+            df = df[column_order]
+            
+            # Convert list columns to string representation for CSV
+            if 'associated_skills' in df.columns:
+                df['associated_skills'] = df['associated_skills'].apply(
+                    lambda x: '; '.join(x) if isinstance(x, list) else str(x) if x else ''
+                )
+            
+            # Export to CSV
+            df.to_csv(output_file, index=False, encoding='utf-8')
+            
+            logger.info(f"Results exported to CSV: {output_file}")
+            
+        except Exception as e:
+            logger.error(f"Failed to export CSV results: {str(e)}")
+            raise LNABotError(f"Failed to export CSV results: {str(e)}")
+    
+    def export_results_to_excel(self, 
+                                analysis_results: List[LNAAnalysisResult], 
+                                summary: DatasetSummary,
+                                output_file: Path) -> None:
+        """
+        Export analysis results to an Excel file with multiple sheets.
+        
+        Args:
+            analysis_results: List of analysis results
+            summary: Dataset summary
+            output_file: Path for the output Excel file
+        """
+        try:
+            import pandas as pd
+            
+            # Check if openpyxl is available for Excel export
+            try:
+                import openpyxl
+            except ImportError:
+                raise ImportError(
+                    "openpyxl is required for Excel export. "
+                    "Install it with: pip install openpyxl>=3.0.0"
+                )
+            
+            # Convert to dictionaries and then to DataFrame
+            results_dict = self.data_processor.analysis_results_to_dict(analysis_results)
+            df = pd.DataFrame(results_dict)
+            
+            # Reorder columns for better readability
+            column_order = [
+                'id', 'submission', 'priority', 'competency', 'estimated_trainees',
+                'expected_training_type', 'reasoning', 'demand_score',
+                'competency_classification', 'associated_skills',
+                'job_families', 'targeted_audience', 'division', 'department', 'section',
+                'analysis_timestamp'
+            ]
+            
+            # Ensure all expected columns exist
+            for col in column_order:
+                if col not in df.columns:
+                    df[col] = None
+            
+            # Reorder DataFrame columns
+            df = df[column_order]
+            
+            # Convert list columns to string representation for Excel
+            if 'associated_skills' in df.columns:
+                df['associated_skills'] = df['associated_skills'].apply(
+                    lambda x: '; '.join(x) if isinstance(x, list) else str(x) if x else ''
+                )
+            
+            # Create summary DataFrame
+            summary_dict = self.data_processor.summary_to_dict(summary)
+            summary_data = []
+            for key, value in summary_dict.items():
+                if key == 'training_type_distribution' and isinstance(value, dict):
+                    for training_type, count in value.items():
+                        summary_data.append({'Metric': f'Training Type - {training_type}', 'Value': count})
+                elif key == 'priority_distribution' and isinstance(value, dict):
+                    for priority, count in value.items():
+                        summary_data.append({'Metric': f'Priority - {priority}', 'Value': count})
+                elif key == 'competency_classification_distribution' and isinstance(value, dict):
+                    for classification, count in value.items():
+                        summary_data.append({'Metric': f'Competency - {classification}', 'Value': count})
+                else:
+                    summary_data.append({'Metric': key.replace('_', ' ').title(), 'Value': value})
+            
+            summary_df = pd.DataFrame(summary_data)
+            
+            # Export to Excel with multiple sheets
+            with pd.ExcelWriter(output_file, engine='openpyxl') as writer:
+                # Main results sheet
+                df.to_excel(writer, sheet_name='Analysis Results', index=False)
+                
+                # Summary sheet
+                summary_df.to_excel(writer, sheet_name='Summary', index=False)
+                
+                # Training type breakdown sheet
+                if 'expected_training_type' in df.columns:
+                    training_breakdown = df.groupby('expected_training_type').agg({
+                        'id': 'count',
+                        'estimated_trainees': 'sum',
+                        'demand_score': 'mean'
+                    }).round(2)
+                    training_breakdown.columns = ['Record Count', 'Total Trainees', 'Avg Demand Score']
+                    training_breakdown.to_excel(writer, sheet_name='Training Type Breakdown')
+                
+                # Competency analysis sheet
+                if 'competency' in df.columns:
+                    competency_stats = df.groupby('competency').agg({
+                        'id': 'count',
+                        'estimated_trainees': 'sum',
+                        'demand_score': 'mean',
+                        'expected_training_type': lambda x: x.mode().iloc[0] if not x.empty else 'N/A'
+                    }).round(2)
+                    competency_stats.columns = ['Record Count', 'Total Trainees', 'Avg Demand Score', 'Most Common Training Type']
+                    competency_stats.to_excel(writer, sheet_name='Competency Analysis')
+            
+            logger.info(f"Results exported to Excel: {output_file}")
+            
+        except Exception as e:
+            logger.error(f"Failed to export Excel results: {str(e)}")
+            raise LNABotError(f"Failed to export Excel results: {str(e)}")
+    
+    def export_results(self, 
+                      analysis_results: List[LNAAnalysisResult], 
+                      summary: DatasetSummary,
+                      output_file: Path,
+                      format_type: str = 'json') -> None:
+        """
+        Export analysis results to specified format (json, csv, or excel).
+        
+        Args:
+            analysis_results: List of analysis results
+            summary: Dataset summary
+            output_file: Path for the output file
+            format_type: Export format ('json', 'csv', or 'excel')
+        """
+        format_type = format_type.lower()
+        
+        if format_type == 'json':
+            self.export_results_to_json(analysis_results, summary, output_file)
+        elif format_type == 'csv':
+            self.export_results_to_csv(analysis_results, summary, output_file)
+        elif format_type == 'excel':
+            self.export_results_to_excel(analysis_results, summary, output_file)
+        else:
+            raise LNABotError(f"Unsupported export format: {format_type}. Supported formats: json, csv, excel")
+    
     def get_summary_report(self, summary: DatasetSummary) -> str:
         """
         Generate a formatted summary report.
