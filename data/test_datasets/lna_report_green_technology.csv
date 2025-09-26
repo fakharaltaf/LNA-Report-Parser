@@ -1,0 +1,21 @@
+ID,Submission,Priority,Competency type,Job families,Targeted competencies,Request type,Targeted audience,Estimated trainees,Comment,Year,Division,Department,Section
+LNA801,2024-10-01,High,Technical,Engineering,Renewable Energy Systems,New Training,Energy Engineers,28,Solar and wind farm optimization,2024,Engineering,Renewable Energy,Clean Technology
+LNA802,2024-10-02,Medium,Technical,Manufacturing,Electric Vehicle Technology,Upskilling,Automotive Engineers,42,EV powertrain development,2024,Automotive,Electric Vehicles,Battery Systems
+LNA803,2024-10-03,High,Technical,Engineering,Smart Grid & Energy Storage,New Training,Grid Engineers,21,Battery storage integration,2024,Utilities,Grid Operations,Energy Storage
+LNA804,2024-10-04,Medium,Technical,Manufacturing,Carbon Capture & Storage,New Training,Process Engineers,19,Industrial decarbonization,2024,Process Industries,Sustainability,Carbon Management
+LNA805,2024-10-05,High,Technical,Engineering,Hydrogen Fuel Technology,New Training,Chemical Engineers,15,Green hydrogen production,2024,Energy,Hydrogen Economy,Fuel Cell Technology
+LNA806,2024-10-06,Medium,Technical,Manufacturing,Sustainable Materials & Packaging,Upskilling,Materials Engineers,34,Biodegradable packaging solutions,2024,Packaging,Sustainable Materials,Circular Economy
+LNA807,2024-10-07,High,Technical,Engineering,Water Treatment & Purification,New Training,Environmental Engineers,26,Advanced water purification systems,2024,Environmental,Water Management,Treatment Technology
+LNA808,2024-10-08,Medium,Technical,Manufacturing,Waste-to-Energy Conversion,New Training,Waste Management Engineers,17,Thermal treatment technologies,2024,Waste Management,Energy Recovery,Thermal Processing
+LNA809,2024-10-09,High,Technical,Engineering,Geothermal Energy Systems,New Training,Geothermal Engineers,12,Enhanced geothermal systems,2024,Renewable Energy,Geothermal,Ground Source Systems
+LNA810,2024-10-10,Medium,Technical,Manufacturing,Biofuel Production Technology,New Training,Biochemical Engineers,23,Advanced biofuel processing,2024,Bioenergy,Biofuels,Renewable Fuels
+LNA811,2024-10-11,High,Technical,Engineering,Energy Efficiency & Building Systems,New Training,Building Engineers,39,Net-zero building design,2024,Construction,Green Building,Energy Systems
+LNA812,2024-10-12,Medium,Technical,Manufacturing,Ocean Energy & Wave Power,New Training,Marine Engineers,14,Offshore renewable energy,2024,Marine Energy,Ocean Technology,Wave Energy Systems
+LNA813,2024-10-13,High,Technical,Engineering,Nuclear Waste Management,New Training,Nuclear Engineers,8,Radioactive waste disposal,2024,Nuclear,Waste Management,Decommissioning
+LNA814,2024-10-14,Medium,Technical,Manufacturing,Biomass & Bioenergy Systems,New Training,Biomass Engineers,31,Sustainable biomass processing,2024,Bioenergy,Biomass,Renewable Resources
+LNA815,2024-10-15,High,Technical,Engineering,Environmental Impact Assessment,New Training,Environmental Consultants,25,Sustainability impact analysis,2024,Environmental,Impact Assessment,Environmental Planning
+LNA816,2024-10-16,Medium,Technical,Manufacturing,Green Chemistry & Clean Production,New Training,Chemical Process Engineers,29,Sustainable chemical processes,2024,Chemical,Green Chemistry,Clean Technology
+LNA817,2024-10-17,High,Technical,Engineering,Climate Change Adaptation,New Training,Climate Scientists,16,Climate resilience planning,2024,Environmental,Climate Science,Adaptation Planning
+LNA818,2024-10-18,Medium,Technical,Manufacturing,Circular Economy & Resource Recovery,Upskilling,Sustainability Managers,33,Waste reduction strategies,2024,Sustainability,Circular Economy,Resource Management
+LNA819,2024-10-19,High,Technical,Engineering,Air Quality & Pollution Control,New Training,Environmental Engineers,22,Emission control technologies,2024,Environmental,Air Quality,Pollution Prevention
+LNA820,2024-10-20,Medium,Technical,Manufacturing,Sustainable Agriculture Technology,New Training,Agricultural Engineers,18,Precision farming systems,2024,Agriculture,AgTech,Sustainable Farming

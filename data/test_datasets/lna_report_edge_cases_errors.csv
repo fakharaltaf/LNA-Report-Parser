@@ -1,0 +1,21 @@
+ID,Submission,Priority,Competency type,Job families,Targeted competencies,Request type,Targeted audience,Estimated trainees,Comment,Year,Division,Department,Section
+LNA501,2024-07-01,High,Technical,IT & Digital,Legacy System Modernization,New Training,COBOL Developers,1,Immediate migration required - no developers available,2024,Technology,Legacy Systems,Mainframe Operations
+LNA502,2024-07-02,Medium,Leadership,Management,Strategic Planning & Decision Making,New Training,Executive Team,500,Unrealistic participant count for executives,2024,Executive,Strategy,Corporate Planning
+LNA503,2024-07-03,Invalid,Technical,Manufacturing,Advanced Quantum Mechanics,New Training,Factory Workers,25,Competency mismatch for target audience,2024,Manufacturing,Production,Assembly Line
+LNA504,2024-07-04,High,Soft Skills,Sales & Marketing,Communication & Presentation Skills,Refresher,Sales Representatives,15,Missing target audience information,2024,Sales,Sales Training,Skills Development
+LNA505,2024-07-05,Medium,Technical,Finance,Cryptocurrency Mining Operations,New Training,Accountants,5,Negative trainee count error,2024,Finance,Treasury,Investment Operations
+LNA506,2024-07-06,Low,Leadership,Management,Team Leadership & Management,Upskilling,Team Leaders,20,Missing competency information,2024,Operations,Team Management,Leadership Development
+LNA507,2024-07-07,High,Technical,Healthcare,Brain Surgery Techniques,New Training,Nurses,12,Skill level mismatch for target audience,2024,Medical Services,Nursing,Patient Care
+LNA508,2024-07-08,Medium,Compliance,All Departments,Data Privacy & GDPR,Refresher,All Employees,999999,Unrealistically large trainee count,2024,Legal,Compliance,Data Protection
+LNA509,2024-07-09,Highest,Technical,IT & Digital,Cloud Computing & DevOps,New Training,Software Engineers,30,Invalid priority level,2024,Technology,Cloud Services,Platform Engineering
+LNA510,2024-07-10,High,Technical,Engineering,Unicorn Psychology,New Training,Engineers,8,Non-existent competency type,2024,Engineering,Mythical Creatures,Fantasy Department
+LNA511,2024-07-11,Medium,Technical,Manufacturing,Nuclear Reactor Operation,New Training,Assembly Workers,15,High-risk competency for unqualified audience,2024,Manufacturing,Production,General Assembly
+LNA512,2024-07-12,Low,Soft Skills,Customer Service,Advanced Theoretical Physics,New Training,Customer Service Reps,22,Academic subject inappropriate for role,2024,Customer Service,Support,Customer Relations
+LNA513,2024-07-13,High,Leadership,Management,Pet Grooming Techniques,New Training,C-Suite Executives,5,Irrelevant competency for leadership role,2024,Executive,Leadership,Strategic Management
+LNA514,2024-07-14,Medium,Technical,Finance,"Financial Modeling, Risk Assessment, Compliance",New Training,Financial Analysts,18,Multiple competencies in single field,2024,Finance,Analysis,Financial Planning
+LNA515,2024-07-15,High,Technical,IT & Digital,Time Travel Programming,New Training,Software Developers,12,Fictional technology competency,2024,Technology,Temporal Systems,Time Research
+LNA516,2024-07-16,Medium,Soft Skills,Human Resources,Communication & Presentation Skills,Refresher,Retired Employees,35,Training for inactive employees,2024,Human Resources,Alumni Relations,Retiree Services
+LNA517,2024-07-17,Low,Technical,Manufacturing,Teleportation Engineering,New Training,Logistics Team,9,Science fiction competency,2024,Logistics,Transportation,Quantum Logistics
+LNA518,2024-07-18,High,Leadership,Management,Dragon Taming & Management,New Training,Project Managers,14,Fantasy competency for real role,2024,Operations,Project Management,Special Projects
+LNA519,2024-07-19,Medium,Technical,Healthcare,Vampire Dentistry,New Training,Dental Hygienists,6,Supernatural medical specialty,2024,Medical Services,Dentistry,Supernatural Care
+LNA520,2024-07-20,High,Compliance,All Departments,Intergalactic Trade Regulations,Refresher,All Staff,450,Futuristic compliance requirement,2024,Legal,Space Compliance,Cosmic Regulations

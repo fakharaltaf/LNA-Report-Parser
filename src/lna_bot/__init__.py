@@ -8,7 +8,7 @@ to provide a complete analysis pipeline.
 
 import logging
 from pathlib import Path
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any, Optional, Tuple, Union
 import json
 
 from .models import LNARecord, LNAAnalysisResult, DatasetSummary, BusinessRules, SkillsMapping
@@ -112,6 +112,85 @@ class LNABot:
         except Exception as e:
             logger.error(f"Analysis failed: {str(e)}")
             raise LNABotError(f"Analysis failed: {str(e)}")
+    
+    def analyze_excel_file(self, file_path: Path, sheet_name: Union[str, int, None] = None) -> Tuple[List[LNAAnalysisResult], DatasetSummary]:
+        """
+        Analyze an LNA Excel file and generate recommendations.
+        
+        Args:
+            excel_file_path: Path to the Excel file containing LNA data
+            sheet_name: Name or index of the sheet to analyze (default: first sheet)
+            
+        Returns:
+            Tuple of (analysis_results, dataset_summary)
+            
+        Raises:
+            LNABotError: If analysis fails
+        """
+        logger.info(f"Starting analysis of Excel file: {file_path} (sheet: {sheet_name or 'first'})")
+        
+        try:
+            # Load Excel data
+            df = self.data_loader.load_excel_file(file_path, sheet_name)
+            
+            # Validate data
+            validation_errors = self.data_loader.validate_dataframe(df)
+            if validation_errors:
+                logger.warning(f"Data validation warnings: {validation_errors}")
+            
+            # Convert to LNARecord objects
+            records = self.data_processor.dataframe_to_records(df)
+            
+            # Analyze records
+            assert self.decision_engine is not None, "Decision engine not initialized"
+            analysis_results, summary = self.decision_engine.analyze_dataset(records)
+            
+            logger.info(f"Analysis complete: {len(analysis_results)} records processed")
+            
+            return analysis_results, summary
+            
+        except Exception as e:
+            logger.error(f"Excel analysis failed: {str(e)}")
+            raise LNABotError(f"Excel analysis failed: {str(e)}")
+    
+    def analyze_file(self, file_path: Path) -> Tuple[List[LNAAnalysisResult], DatasetSummary]:
+        """
+        Analyze an LNA file (CSV or Excel) with automatic format detection.
+        
+        Args:
+            file_path: Path to the file containing LNA data
+            
+        Returns:
+            Tuple of (analysis_results, dataset_summary)
+            
+        Raises:
+            LNABotError: If analysis fails
+        """
+        logger.info(f"Starting analysis of file: {file_path}")
+        
+        try:
+            # Load file data with auto-detection (uses first sheet for Excel files)
+            df = self.data_loader.load_file(file_path)
+            
+            # Validate data
+            validation_errors = self.data_loader.validate_dataframe(df)
+            if validation_errors:
+                logger.warning(f"Data validation warnings: {validation_errors}")
+            
+            # Convert to LNARecord objects
+            records = self.data_processor.dataframe_to_records(df)
+            
+            # Analyze records
+            assert self.decision_engine is not None, "Decision engine not initialized"
+            analysis_results, summary = self.decision_engine.analyze_dataset(records)
+            
+            logger.info(f"Analysis complete: {len(analysis_results)} records processed")
+            
+            return analysis_results, summary
+            
+        except Exception as e:
+            logger.error(f"File analysis failed: {str(e)}")
+            raise LNABotError(f"File analysis failed: {str(e)}")
     
     def analyze_single_record(self, record: LNARecord) -> LNAAnalysisResult:
         """

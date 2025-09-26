@@ -8,7 +8,7 @@ classifications from various sources (files, databases, etc.).
 import json
 import logging
 from pathlib import Path
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any, Optional, Union
 import pandas as pd
 
 from ..models import BusinessRules, SkillsMapping, PriorityLevel
@@ -289,6 +289,114 @@ class DataLoader:
         except Exception as e:
             logger.error(f"Failed to load CSV file {file_path}: {str(e)}")
             raise ValueError(f"Failed to load CSV file: {str(e)}")
+    
+    def load_excel_file(self, file_path: Path, sheet_name: Union[str, int, None] = None) -> pd.DataFrame:
+        """
+        Load LNA data from an Excel file.
+        
+        Args:
+            file_path: Path to the Excel file
+            sheet_name: Name or index of the sheet to load (default: first sheet)
+            
+        Returns:
+            DataFrame containing the LNA data
+            
+        Raises:
+            FileNotFoundError: If the Excel file doesn't exist
+            ValueError: If the Excel file has invalid format
+            ImportError: If openpyxl is not installed
+        """
+        if not file_path.exists():
+            raise FileNotFoundError(f"Excel file not found: {file_path}")
+        
+        try:
+            # Check if openpyxl is available
+            try:
+                import openpyxl
+            except ImportError:
+                raise ImportError(
+                    "openpyxl is required for Excel file support. "
+                    "Install it with: pip install openpyxl>=3.0.0"
+                )
+            
+            # Load Excel file with proper handling
+            df = pd.read_excel(file_path, sheet_name=sheet_name or 0)
+            
+            # Apply same validation as CSV files
+            required_columns = [
+                'ID', 'Submission', 'Priority', 'Competency type', 'Job families',
+                'Targeted competencies', 'Request type', 'Targeted audience',
+                'Estimated trainees', 'Comment', 'Year', 'Division', 'Department', 'Section'
+            ]
+            
+            missing_columns = [col for col in required_columns if col not in df.columns]
+            if missing_columns:
+                raise ValueError(f"Missing required columns: {missing_columns}")
+            
+            # Basic data validation
+            if df.empty:
+                raise ValueError("Excel file is empty")
+            
+            # Check for required non-null columns
+            critical_columns = ['ID', 'Priority', 'Targeted competencies', 'Estimated trainees']
+            for col in critical_columns:
+                if df[col].isnull().any():
+                    raise ValueError(f"Column '{col}' contains null values")
+            
+            logger.info(f"Successfully loaded Excel file: {file_path} ({len(df)} records)")
+            
+            return df
+            
+        except pd.errors.EmptyDataError:
+            raise ValueError(f"Excel file is empty: {file_path}")
+        except Exception as e:
+            logger.error(f"Failed to load Excel file {file_path}: {str(e)}")
+            raise ValueError(f"Failed to load Excel file: {str(e)}")
+    
+    def _detect_file_type(self, file_path: Path) -> str:
+        """
+        Detect file type based on file extension.
+        
+        Args:
+            file_path: Path to the file
+            
+        Returns:
+            File type string ('csv', 'excel')
+            
+        Raises:
+            ValueError: If file type is not supported
+        """
+        suffix = file_path.suffix.lower()
+        if suffix == '.csv':
+            return 'csv'
+        elif suffix in ['.xlsx', '.xls', '.xlsm']:
+            return 'excel'
+        else:
+            raise ValueError(f"Unsupported file format: {suffix}. Supported formats: .csv, .xlsx, .xls, .xlsm")
+    
+    def load_file(self, file_path: Path, sheet_name: str = None) -> pd.DataFrame:
+        """
+        Universal file loader with automatic format detection.
+        
+        Args:
+            file_path: Path to the file (CSV or Excel)
+            sheet_name: Name or index of Excel sheet (ignored for CSV files)
+            
+        Returns:
+            DataFrame containing the LNA data
+            
+        Raises:
+            FileNotFoundError: If the file doesn't exist
+            ValueError: If the file format is unsupported or invalid
+        """
+        file_type = self._detect_file_type(file_path)
+        
+        if file_type == 'csv':
+            return self.load_csv_file(file_path)
+        elif file_type == 'excel':
+            return self.load_excel_file(file_path, sheet_name)
+        else:
+            raise ValueError(f"Unsupported file type: {file_type}")
     
     def validate_dataframe(self, df: pd.DataFrame) -> List[str]:
         """

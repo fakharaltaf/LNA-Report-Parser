@@ -1,0 +1,21 @@
+ID,Submission,Priority,Competency type,Job families,Targeted competencies,Request type,Targeted audience,Estimated trainees,Comment,Year,Division,Department,Section
+LNA201,2024-04-01,Medium,Technical,Manufacturing,Lean Manufacturing & Six Sigma,New Training,Production Managers,45,Green Belt to Black Belt progression,2024,Manufacturing,Process Improvement,Continuous Improvement
+LNA202,2024-04-02,High,Leadership,Management,Project Management Certification,New Training,Project Managers,38,PMP certification requirement,2024,Operations,Project Management Office,Strategic Projects
+LNA203,2024-04-03,Medium,Technical,IT & Digital,Cloud Computing & DevOps,Upskilling,DevOps Engineers,52,AWS/Azure certification track,2024,Technology,Cloud Infrastructure,Platform Engineering
+LNA204,2024-04-04,Low,Soft Skills,Sales & Marketing,Customer Relationship Management,Refresher,Sales Representatives,78,CRM system optimization training,2024,Sales,Customer Success,Account Management
+LNA205,2024-04-05,High,Leadership,Management,Strategic Planning & Decision Making,New Training,Vice Presidents,15,Strategic planning methodology,2024,Executive,Strategic Planning,Corporate Strategy
+LNA206,2024-04-06,Medium,Technical,Engineering,Agile Leadership & Scrum Mastery,New Training,Engineering Managers,29,Scaled Agile Framework implementation,2024,Technology,Software Engineering,Agile Coaching
+LNA207,2024-04-07,Low,Compliance,All Departments,Workplace Safety & Health,Refresher,All Field Workers,156,Annual safety training compliance,2024,Operations,Health & Safety,Safety Management
+LNA208,2024-04-08,High,Technical,Finance,Advanced Excel & Financial Modeling,Upskilling,Financial Analysts,41,Advanced modeling techniques,2024,Finance,Financial Planning,Business Analysis
+LNA209,2024-04-09,Medium,Soft Skills,Human Resources,Diversity & Inclusion Awareness,New Training,HR Business Partners,23,Inclusive leadership program,2024,Human Resources,Diversity & Inclusion,Employee Relations
+LNA210,2024-04-10,High,Technical,IT & Digital,Cybersecurity & Information Security,New Training,Security Analysts,31,CISSP certification preparation,2024,Technology,Information Security,Cyber Defense
+LNA211,2024-04-11,Medium,Leadership,Management,Change Management,Upskilling,Change Champions,34,Organizational change methodology,2024,Operations,Change Management,Transformation Office
+LNA212,2024-04-12,Low,Soft Skills,All Departments,Time Management & Productivity,Refresher,Administrative Staff,67,Digital productivity tools training,2024,Operations,Administrative Services,Executive Support
+LNA213,2024-04-13,High,Technical,Engineering,Database Administration & Optimization,New Training,Database Administrators,18,NoSQL and big data technologies,2024,Technology,Data Management,Database Engineering
+LNA214,2024-04-14,Medium,Soft Skills,Sales & Marketing,Cross-Cultural Communication,New Training,International Sales Team,26,Global market expansion support,2024,Sales,International Markets,Global Sales
+LNA215,2024-04-15,High,Leadership,Management,Innovation Management,New Training,Innovation Leaders,21,Innovation framework implementation,2024,Strategy,Innovation Lab,Idea Management
+LNA216,2024-04-16,Medium,Technical,IT & Digital,Mobile App Development,Upskilling,Mobile Developers,33,Flutter and React Native training,2024,Technology,Mobile Solutions,App Development
+LNA217,2024-04-17,Low,Soft Skills,Customer Service,Emotional Intelligence & Team Dynamics,Upskilling,Customer Service Reps,89,Customer experience improvement,2024,Customer Service,Customer Experience,Service Delivery
+LNA218,2024-04-18,High,Technical,Manufacturing,API Design & Management,New Training,Integration Architects,14,Microservices architecture transition,2024,Technology,Integration Services,API Management
+LNA219,2024-04-19,Medium,Leadership,Management,Digital Transformation Leadership,Upskilling,Digital Leaders,28,Digital mindset development,2024,Strategy,Digital Transformation,Change Leadership
+LNA220,2024-04-20,High,Technical,Finance,Anti-Money Laundering (AML),Refresher,Compliance Officers,37,Enhanced due diligence procedures,2024,Legal,Regulatory Compliance,AML Compliance

@@ -1,0 +1,21 @@
+ID,Submission,Priority,Competency type,Job families,Targeted competencies,Request type,Targeted audience,Estimated trainees,Comment,Year,Division,Department,Section
+LNA101,2024-03-01,High,Technical,Healthcare,Advanced Clinical Research,New Training,Research Scientists,3,Specialized cancer research protocols,2024,Research & Development,Clinical Research,Oncology Research
+LNA102,2024-03-02,High,Technical,Healthcare,Specialized Surgery Techniques,New Training,Cardiac Surgeons,2,Minimally invasive cardiac procedures,2024,Medical Services,Cardiac Surgery,Interventional Cardiology
+LNA103,2024-03-03,Medium,Technical,IT & Digital,Quantum Computing Fundamentals,New Training,Research Engineers,4,Quantum algorithm development project,2024,Technology,Advanced Computing,Quantum Research Lab
+LNA104,2024-03-04,High,Technical,Manufacturing,Nuclear Medicine,New Training,Nuclear Technicians,5,New radioisotope therapy equipment,2024,Medical Services,Nuclear Medicine,Imaging & Therapy
+LNA105,2024-03-05,Medium,Leadership,Management,Crisis Management & Business Continuity,Upskilling,Emergency Response Team,8,Post-pandemic preparedness initiative,2024,Operations,Risk Management,Emergency Planning
+LNA106,2024-03-06,Low,Soft Skills,All Departments,Communication & Presentation Skills,Refresher,All Staff,320,Annual communication skills refresh,2024,Human Resources,Learning & Development,Training Center
+LNA107,2024-03-07,High,Technical,Finance,Advanced Financial Risk Modeling,New Training,Quantitative Analysts,7,Regulatory capital requirement changes,2024,Finance,Risk Management,Market Risk
+LNA108,2024-03-08,Medium,Technical,IT & Digital,Blockchain Technology,New Training,Software Architects,6,Decentralized finance platform development,2024,Technology,Software Engineering,DeFi Development
+LNA109,2024-03-09,High,Leadership,Management,Digital Transformation Leadership,Upskilling,C-Suite Executives,12,Enterprise-wide digital strategy,2024,Executive,Strategy & Planning,Digital Office
+LNA110,2024-03-10,Medium,Technical,Engineering,Advanced Materials Science,New Training,Materials Engineers,9,Next-generation battery technology,2024,Research & Development,Materials Science,Battery Innovation
+LNA111,2024-03-11,Low,Compliance,All Departments,Data Privacy & GDPR,Refresher,All Employees,450,Annual mandatory compliance training,2024,Legal,Compliance,Data Protection
+LNA112,2024-03-12,High,Technical,Manufacturing,Precision Manufacturing & Quality Control,New Training,Quality Engineers,11,Six Sigma Black Belt certification,2024,Manufacturing,Quality Assurance,Process Excellence
+LNA113,2024-03-13,Medium,Soft Skills,Sales & Marketing,Neuromarketing & Consumer Psychology,New Training,Marketing Managers,14,Consumer behavior analysis enhancement,2024,Marketing,Consumer Insights,Behavioral Analytics
+LNA114,2024-03-14,High,Technical,IT & Digital,Artificial Intelligence Ethics,New Training,AI Ethics Committee,8,Responsible AI development framework,2024,Technology,AI Governance,Ethics & Compliance
+LNA115,2024-03-15,Medium,Leadership,Management,Transformational Leadership,Upskilling,Department Heads,16,Leadership pipeline development,2024,Human Resources,Leadership Development,Succession Planning
+LNA116,2024-03-16,Low,Soft Skills,All Departments,Mental Health & Wellness,Upskilling,All Managers,85,Employee wellbeing initiative,2024,Human Resources,Employee Wellness,Mental Health Support
+LNA117,2024-03-17,High,Technical,Healthcare,Genomics & Personalized Medicine,New Training,Medical Geneticists,4,Precision medicine program launch,2024,Medical Services,Genetics,Personalized Medicine
+LNA118,2024-03-18,Medium,Technical,IT & Digital,Edge Computing & IoT,New Training,IoT Developers,13,Smart city infrastructure project,2024,Technology,IoT Solutions,Smart Infrastructure
+LNA119,2024-03-19,High,Technical,Finance,Cryptocurrency & Digital Assets,New Training,Investment Analysts,6,Digital asset investment strategy,2024,Finance,Investment Management,Alternative Investments
+LNA120,2024-03-20,Medium,Leadership,Management,Data-Driven Decision Making,Upskilling,Senior Analysts,19,Analytics-driven culture transformation,2024,Strategy,Business Intelligence,Decision Sciences

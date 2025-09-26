@@ -23,7 +23,7 @@ def print_menu():
     print("\n" + "=" * 60)
     print("LNA Bot - AI-Powered Training Recommendations")
     print("=" * 60)
-    print("1. Analyze CSV file")
+    print("1. Analyze CSV/Excel file")
     print("2. Single record analysis")
     print("3. Test business rules")
     print("4. View configuration")
@@ -33,13 +33,21 @@ def print_menu():
     print("-" * 60)
 
 def analyze_csv():
-    """Analyze a CSV file."""
-    print("\nAvailable CSV files:")
+    """Analyze a CSV or Excel file."""
+    print("\nAvailable test files (CSV format):")
     csv_files = [
         "data/test_datasets/lna_report_2024_q1.csv",
         "data/test_datasets/lna_report_2024_q2.csv", 
         "data/test_datasets/lna_report_2024_q3.csv",
-        "data/test_datasets/lna_report_2024_q4_2025_preview.csv"
+        "data/test_datasets/lna_report_2024_q4_2025_preview.csv",
+        "data/test_datasets/lna_report_specialized_competencies.csv",
+        "data/test_datasets/lna_report_medium_scale_training.csv",
+        "data/test_datasets/lna_report_large_scale_training.csv",
+        "data/test_datasets/lna_report_emerging_technologies.csv",
+        "data/test_datasets/lna_report_edge_cases_errors.csv",
+        "data/test_datasets/lna_report_pharmaceutical_industry.csv",
+        "data/test_datasets/lna_report_fintech_banking.csv",
+        "data/test_datasets/lna_report_green_technology.csv"
     ]
     
     for i, file in enumerate(csv_files, 1):
@@ -48,26 +56,47 @@ def analyze_csv():
         else:
             print(f"{i}. {file} (NOT FOUND)")
     
-    print("5. Enter custom path")
+    print(f"{len(csv_files) + 1}. Enter custom path (CSV/Excel)")
     
     try:
-        choice = input("\nSelect file (1-5): ").strip()
+        choice = input(f"\nSelect file (1-{len(csv_files) + 1}): ").strip()
         
-        if choice == "5":
-            csv_path = input("Enter CSV file path: ").strip()
-        elif choice in ["1", "2", "3", "4"]:
-            csv_path = csv_files[int(choice) - 1]
+        if choice == str(len(csv_files) + 1):
+            file_path = input("Enter file path (CSV or Excel): ").strip()
+        elif choice.isdigit() and 1 <= int(choice) <= len(csv_files):
+            file_path = csv_files[int(choice) - 1]
         else:
             print("Invalid choice!")
             return
         
-        if not Path(csv_path).exists():
-            print(f"File not found: {csv_path}")
+        if not Path(file_path).exists():
+            print(f"File not found: {file_path}")
             return
         
-        print(f"\nAnalyzing {csv_path}...")
+        # Detect file type and handle accordingly
         bot = LNABot()
-        results, summary = bot.analyze_csv_file(Path(csv_path))
+        file_path_obj = Path(file_path)
+        
+        try:
+            # Check if it's an Excel file
+            if file_path_obj.suffix.lower() in ['.xlsx', '.xls', '.xlsm']:
+                sheet_name = None
+                # For Excel files, optionally ask for sheet selection
+                use_default = input("Use default sheet (first sheet)? (y/n): ").strip().lower()
+                if use_default != 'y':
+                    sheet_name = input("Enter sheet name or index: ").strip()
+                    if sheet_name.isdigit():
+                        sheet_name = int(sheet_name)
+                
+                print(f"\nAnalyzing Excel file: {file_path} (sheet: {sheet_name or 'first'})...")
+                results, summary = bot.analyze_excel_file(file_path_obj, sheet_name)
+            else:
+                print(f"\nAnalyzing CSV file: {file_path}...")
+                results, summary = bot.analyze_csv_file(file_path_obj)
+        except Exception as e:
+            # Fallback to universal analyzer
+            print(f"\nAnalyzing file: {file_path}...")
+            results, summary = bot.analyze_file(file_path_obj)
         
         # Display summary
         print(f"\nAnalysis Summary:")
@@ -282,7 +311,15 @@ def export_analysis():
             "data/test_datasets/lna_report_2024_q1.csv",
             "data/test_datasets/lna_report_2024_q2.csv",
             "data/test_datasets/lna_report_2024_q3.csv", 
-            "data/test_datasets/lna_report_2024_q4_2025_preview.csv"
+            "data/test_datasets/lna_report_2024_q4_2025_preview.csv",
+            "data/test_datasets/lna_report_specialized_competencies.csv",
+            "data/test_datasets/lna_report_medium_scale_training.csv",
+            "data/test_datasets/lna_report_large_scale_training.csv",
+            "data/test_datasets/lna_report_emerging_technologies.csv",
+            "data/test_datasets/lna_report_edge_cases_errors.csv",
+            "data/test_datasets/lna_report_pharmaceutical_industry.csv",
+            "data/test_datasets/lna_report_fintech_banking.csv",
+            "data/test_datasets/lna_report_green_technology.csv"
         ]
         
         print("Select file to analyze and export:")
@@ -290,8 +327,8 @@ def export_analysis():
             if Path(file).exists():
                 print(f"{i}. {file}")
         
-        choice = input("Select file (1-4): ").strip()
-        if choice not in ["1", "2", "3", "4"]:
+        choice = input(f"Select file (1-{len(csv_files)}): ").strip()
+        if not choice.isdigit() or not (1 <= int(choice) <= len(csv_files)):
             print("Invalid choice!")
             return
         
