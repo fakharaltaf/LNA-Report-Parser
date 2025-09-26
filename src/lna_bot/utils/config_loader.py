@@ -374,7 +374,7 @@ class DataLoader:
         else:
             raise ValueError(f"Unsupported file format: {suffix}. Supported formats: .csv, .xlsx, .xls, .xlsm")
     
-    def load_file(self, file_path: Path, sheet_name: str = None) -> pd.DataFrame:
+    def load_file(self, file_path: Path, sheet_name: Union[str, int, None] = None) -> pd.DataFrame:
         """
         Universal file loader with automatic format detection.
         
