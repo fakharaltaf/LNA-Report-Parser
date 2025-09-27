@@ -1,0 +1,26 @@
+ID,Submission,Priority,Competency type,Job families,Targeted competencies,Request type,Targeted audience,Estimated trainees,Comment,Year,Division,Department,Section
+LNA501,2024-11-01,High,Technical,Healthcare,Patient Safety,New Training,Medical Staff,45,Patient safety protocols and procedures training,2024,Healthcare,Patient Care,Safety Department
+LNA502,2024-11-02,Medium,Technical,Manufacturing,Quality Control & Assurance,Upskilling,Quality Engineers,32,Quality management system improvement,2024,Manufacturing,Quality Assurance,QC Systems
+LNA503,2024-11-03,High,Technical,Finance,Risk Management & Compliance,New Training,Risk Officers,18,Financial risk assessment and mitigation,2024,Finance,Risk Management,Compliance
+LNA504,2024-11-04,Low,Soft Skills,Sales,Negotiation Skills,Refresher,Sales Representatives,67,Sales negotiation techniques refresh,2024,Commercial,Sales,Business Development
+LNA505,2024-11-05,High,Leadership,Management,Project Management,New Training,Project Managers,29,Advanced project management methodologies,2024,Operations,Project Management Office,PMO
+LNA506,2024-11-06,Medium,Technical,IT & Digital,Software Development,Upskilling,Developers,41,Modern software development practices,2024,Technology,Software Engineering,Development
+LNA507,2024-11-07,High,Technical,Engineering,Product Design & Innovation,New Training,Design Engineers,23,Innovative product development processes,2024,Engineering,Product Development,Design Innovation
+LNA508,2024-11-08,Low,Compliance,Legal,Contract Management,Refresher,Legal Staff,15,Contract negotiation and management,2024,Legal,Contracts,Legal Operations
+LNA509,2024-11-09,Medium,Soft Skills,HR,Talent Acquisition & Retention,Upskilling,HR Specialists,26,Modern talent management strategies,2024,Operations,Human Resources,Talent Management
+LNA510,2024-11-10,High,Technical,Manufacturing,Supply Chain Management,New Training,Supply Chain Analysts,34,Global supply chain optimization,2024,Manufacturing,Supply Chain,Logistics
+LNA511,2024-11-11,Medium,Leadership,Executive,Business Strategy,Upskilling,Senior Executives,12,Strategic business planning and execution,2024,Executive,Strategy,Business Planning
+LNA512,2024-11-12,Low,Soft Skills,Customer Service,Problem Solving & Critical Thinking,Refresher,Support Staff,89,Enhanced problem-solving capabilities,2024,Commercial,Customer Support,Technical Support
+LNA513,2024-11-13,High,Technical,Finance,Investment Analysis & Portfolio Management,New Training,Investment Analysts,16,Advanced investment strategies,2024,Finance,Investment Management,Portfolio Analysis
+LNA514,2024-11-14,Medium,Technical,IT & Digital,Network Security & Infrastructure,Upskilling,Network Engineers,28,Network security hardening techniques,2024,Technology,Network Operations,Security Infrastructure
+LNA515,2024-11-15,High,Technical,Healthcare,Medical Research & Clinical Trials,New Training,Clinical Researchers,11,Clinical trial design and management,2024,Healthcare,Clinical Research,Medical Trials
+LNA516,2024-11-16,Low,Soft Skills,Management,Team Building & Collaboration,Refresher,Team Leaders,73,Effective team collaboration techniques,2024,Operations,Team Development,Collaboration
+LNA517,2024-11-17,Medium,Technical,Manufacturing,Environmental Compliance & Sustainability,Upskilling,Environmental Engineers,22,Sustainable manufacturing practices,2024,Manufacturing,Environmental,Sustainability
+LNA518,2024-11-18,High,Leadership,Management,Crisis Management & Business Continuity,New Training,Crisis Management Team,19,Crisis response and business continuity planning,2024,Operations,Risk Management,Crisis Response
+LNA519,2024-11-19,Medium,Technical,Finance,Tax Planning & Optimization,Upskilling,Tax Specialists,25,Advanced tax strategy and compliance,2024,Finance,Tax Planning,Tax Optimization
+LNA520,2024-11-20,Low,Soft Skills,All Departments,Ethics & Professional Conduct,Refresher,All Employees,156,Annual ethics and conduct training,2024,Corporate,Ethics & Compliance,Professional Standards
+LNA521,2024-11-21,High,Technical,Technology,Systems Integration & Architecture,New Training,System Architects,14,Enterprise system integration strategies,2024,Technology,Systems Architecture,Integration
+LNA522,2024-11-22,Medium,Technical,Manufacturing,Inventory Management & Optimization,Upskilling,Inventory Managers,31,Just-in-time inventory optimization,2024,Manufacturing,Inventory Control,Optimization
+LNA523,2024-11-23,High,Leadership,Executive,Mergers & Acquisitions,New Training,M&A Team,8,M&A due diligence and integration,2024,Executive,Corporate Development,M&A
+LNA524,2024-11-24,Low,Soft Skills,Marketing,Brand Management & Marketing Strategy,Refresher,Marketing Team,44,Brand positioning and marketing effectiveness,2024,Commercial,Marketing,Brand Management
+LNA525,2024-11-25,Medium,Technical,Healthcare,Healthcare Information Systems,Upskilling,Health IT Staff,37,Electronic health record optimization,2024,Healthcare,Health Information,IT Systems

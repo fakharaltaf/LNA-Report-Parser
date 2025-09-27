@@ -192,6 +192,49 @@ class LNABot:
             logger.error(f"File analysis failed: {str(e)}")
             raise LNABotError(f"File analysis failed: {str(e)}")
     
+    def analyze_file_with_stats(self, file_path: Path) -> Tuple[List[LNAAnalysisResult], DatasetSummary, Any]:
+        """
+        Analyze an LNA file with detailed processing statistics.
+        
+        Args:
+            file_path: Path to the file containing LNA data
+            
+        Returns:
+            Tuple of (analysis_results, dataset_summary, processing_statistics)
+            
+        Raises:
+            LNABotError: If analysis fails
+        """
+        from .models import ProcessingStatistics
+        
+        logger.info(f"Starting analysis of file: {file_path}")
+        
+        try:
+            # Load file data with auto-detection (uses first sheet for Excel files)
+            df = self.data_loader.load_file(file_path)
+            
+            # Validate data
+            validation_errors = self.data_loader.validate_dataframe(df)
+            validation_warnings = validation_errors if validation_errors else []
+            
+            # Convert to LNARecord objects with statistics
+            records, processing_stats = self.data_processor.dataframe_to_records_with_stats(df)
+            
+            # Add validation warnings to processing stats
+            processing_stats.validation_warnings = validation_warnings
+            
+            # Analyze records
+            assert self.decision_engine is not None, "Decision engine not initialized"
+            analysis_results, summary = self.decision_engine.analyze_dataset(records)
+            
+            logger.info(f"Analysis complete: {len(analysis_results)} records processed with {processing_stats.success_rate:.1f}% success rate")
+            
+            return analysis_results, summary, processing_stats
+            
+        except Exception as e:
+            logger.error(f"File analysis failed: {str(e)}")
+            raise LNABotError(f"File analysis failed: {str(e)}")
+    
     def analyze_single_record(self, record: LNARecord) -> LNAAnalysisResult:
         """
         Analyze a single LNA record.

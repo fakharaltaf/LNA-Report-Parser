@@ -76,6 +76,50 @@ class DataProcessor:
         logger.info(f"Successfully converted {len(records)} records")
         return records
     
+    def dataframe_to_records_with_stats(self, df: pd.DataFrame) -> tuple[List[LNARecord], Any]:
+        """
+        Convert a pandas DataFrame to a list of LNARecord objects with detailed statistics.
+        
+        Args:
+            df: DataFrame containing LNA data
+            
+        Returns:
+            Tuple of (List of validated LNARecord objects, ProcessingStatistics)
+            
+        Raises:
+            DataProcessingError: If no records could be processed
+        """
+        from ..models import ProcessingStatistics
+        
+        logger.info(f"Converting DataFrame to LNARecord objects ({len(df)} rows)")
+        
+        records = []
+        errors = []
+        
+        for idx, row in df.iterrows():
+            try:
+                record = self._row_to_record(row)
+                records.append(record)
+            except Exception as e:
+                row_num = int(idx) + 1 if isinstance(idx, (int, float)) else idx
+                error_msg = f"Row {row_num}: {str(e)}"
+                errors.append(error_msg)
+                logger.warning(f"Failed to convert row {row_num}: {str(e)}")
+        
+        # Create processing statistics
+        stats = ProcessingStatistics(
+            total_rows=len(df),
+            successful_records=len(records),
+            failed_records=len(errors),
+            processing_errors=errors
+        )
+        
+        if len(errors) == len(df):
+            raise DataProcessingError("Failed to convert any rows from DataFrame")
+        
+        logger.info(f"Successfully converted {len(records)} out of {len(df)} records ({stats.success_rate:.1f}% success rate)")
+        return records, stats
+    
     def _row_to_record(self, row: pd.Series) -> LNARecord:
         """
         Convert a pandas Series (DataFrame row) to an LNARecord.
@@ -108,22 +152,31 @@ class DataProcessor:
             # Parse year
             year = self._parse_year(row['Year'])
             
+            # Handle string fields with fallbacks for missing values
+            def safe_str(value, field_name, default="Unknown"):
+                if pd.isna(value) or str(value).strip() == '' or str(value).strip().lower() == 'nan':
+                    if field_name in ['ID', 'Targeted competencies']:
+                        raise ValueError(f"{field_name} is null or empty - this is a critical field")
+                    logger.warning(f"Missing {field_name} - using default '{default}'")
+                    return default
+                return str(value).strip()
+
             # Create LNARecord
             record = LNARecord(
-                id=str(row['ID']).strip(),
+                id=safe_str(row['ID'], 'ID'),
                 submission=submission_date,
                 priority=priority,
                 competency_type=competency_type,
-                job_families=str(row['Job families']).strip(),
-                targeted_competencies=str(row['Targeted competencies']).strip(),
+                job_families=safe_str(row['Job families'], 'Job families', 'General'),
+                targeted_competencies=safe_str(row['Targeted competencies'], 'Targeted competencies'),
                 request_type=request_type,
-                targeted_audience=str(row['Targeted audience']).strip(),
+                targeted_audience=safe_str(row['Targeted audience'], 'Targeted audience', 'General Staff'),
                 estimated_trainees=estimated_trainees,
-                comment=str(row['Comment']).strip(),
+                comment=safe_str(row['Comment'], 'Comment', 'No comment provided'),
                 year=year,
-                division=str(row['Division']).strip(),
-                department=str(row['Department']).strip(),
-                section=str(row['Section']).strip()
+                division=safe_str(row['Division'], 'Division', 'General'),
+                department=safe_str(row['Department'], 'Department', 'General'),
+                section=safe_str(row['Section'], 'Section', 'General')
             )
             
             return record
@@ -133,8 +186,10 @@ class DataProcessor:
     
     def _parse_date(self, date_value: Any) -> datetime:
         """Parse a date value from various formats."""
-        if pd.isna(date_value):
-            raise ValueError("Date value is null or empty")
+        if pd.isna(date_value) or str(date_value).strip() == '':
+            # Use current date as fallback for missing submission dates
+            logger.warning("Missing submission date - using current date as fallback")
+            return datetime.now()
         
         if isinstance(date_value, datetime):
             return date_value
@@ -143,69 +198,120 @@ class DataProcessor:
             # Try parsing as string
             return date_parser.parse(str(date_value))
         except Exception:
-            raise ValueError(f"Cannot parse date: {date_value}")
+            # Use current date as fallback for invalid dates
+            logger.warning(f"Cannot parse date '{date_value}' - using current date as fallback")
+            return datetime.now()
     
     def _parse_priority(self, priority_value: Any) -> PriorityLevel:
         """Parse priority level from string value."""
-        if pd.isna(priority_value):
-            raise ValueError("Priority value is null or empty")
+        if pd.isna(priority_value) or str(priority_value).strip() == '':
+            raise ValueError("Priority value is null or empty - this is a critical field")
         
         priority_str = str(priority_value).strip()
+        
+        # Handle common alternative priority values
+        priority_mapping = {
+            'Very High': 'High',
+            'Critical': 'High', 
+            'Urgent': 'High',
+            'Normal': 'Medium',
+            'Standard': 'Medium',
+            'Minor': 'Low',
+            'Minimal': 'Low'
+        }
+        
+        if priority_str in priority_mapping:
+            priority_str = priority_mapping[priority_str]
+            logger.warning(f"Mapped priority '{priority_value}' to '{priority_str}'")
         
         try:
             return PriorityLevel(priority_str)
         except ValueError:
-            raise ValueError(f"Invalid priority level: {priority_str}")
+            # Default to Medium priority for invalid values
+            logger.warning(f"Invalid priority level '{priority_str}' - defaulting to Medium")
+            return PriorityLevel.MEDIUM
     
     def _parse_competency_type(self, competency_type_value: Any) -> CompetencyType:
         """Parse competency type from string value."""
-        if pd.isna(competency_type_value):
-            raise ValueError("Competency type value is null or empty")
+        if pd.isna(competency_type_value) or str(competency_type_value).strip() == '':
+            logger.warning("Missing competency type - defaulting to Technical")
+            return CompetencyType.TECHNICAL
         
         competency_type_str = str(competency_type_value).strip()
         
         try:
             return CompetencyType(competency_type_str)
         except ValueError:
-            raise ValueError(f"Invalid competency type: {competency_type_str}")
+            # Default to Technical for invalid competency types
+            logger.warning(f"Invalid competency type '{competency_type_str}' - defaulting to Technical")
+            return CompetencyType.TECHNICAL
     
     def _parse_request_type(self, request_type_value: Any) -> RequestType:
         """Parse request type from string value."""
-        if pd.isna(request_type_value):
-            raise ValueError("Request type value is null or empty")
+        if pd.isna(request_type_value) or str(request_type_value).strip() == '':
+            logger.warning("Missing request type - defaulting to New Training")
+            return RequestType.NEW_TRAINING
         
         request_type_str = str(request_type_value).strip()
+        
+        # Handle common alternative request type values
+        request_mapping = {
+            'New': 'New Training',
+            'Training': 'New Training',
+            'Update': 'Upskilling',
+            'Skill Development': 'Upskilling',
+            'Refresh': 'Refresher',
+            'Review': 'Refresher'
+        }
+        
+        if request_type_str in request_mapping:
+            request_type_str = request_mapping[request_type_str]
+            logger.warning(f"Mapped request type '{request_type_value}' to '{request_type_str}'")
         
         try:
             return RequestType(request_type_str)
         except ValueError:
-            raise ValueError(f"Invalid request type: {request_type_str}")
+            # Default to New Training for invalid request types
+            logger.warning(f"Invalid request type '{request_type_str}' - defaulting to New Training")
+            return RequestType.NEW_TRAINING
     
     def _parse_trainees(self, trainees_value: Any) -> int:
         """Parse estimated trainees from numeric value."""
-        if pd.isna(trainees_value):
-            raise ValueError("Estimated trainees value is null or empty")
+        if pd.isna(trainees_value) or str(trainees_value).strip() == '':
+            raise ValueError("Estimated trainees value is null or empty - this is a critical field")
         
         try:
             trainees = int(float(trainees_value))  # Handle both int and float
             if trainees <= 0:
                 raise ValueError("Estimated trainees must be greater than 0")
+            if trainees > 100000:  # Cap extremely large values
+                logger.warning(f"Very large trainee count ({trainees}) - capping at 10000")
+                return 10000
             return trainees
         except (ValueError, TypeError):
             raise ValueError(f"Invalid estimated trainees value: {trainees_value}")
     
     def _parse_year(self, year_value: Any) -> int:
         """Parse year from numeric value."""
-        if pd.isna(year_value):
-            raise ValueError("Year value is null or empty")
+        if pd.isna(year_value) or str(year_value).strip() == '':
+            # Use current year as fallback
+            current_year = datetime.now().year
+            logger.warning(f"Missing year - using current year {current_year}")
+            return current_year
         
         try:
             year = int(float(year_value))  # Handle both int and float
             if year < 2020 or year > 2030:
-                raise ValueError("Year must be between 2020 and 2030")
+                # Use current year for out-of-range values
+                current_year = datetime.now().year
+                logger.warning(f"Year {year} out of range (2020-2030) - using current year {current_year}")
+                return current_year
             return year
         except (ValueError, TypeError):
-            raise ValueError(f"Invalid year value: {year_value}")
+            # Use current year as fallback for invalid years
+            current_year = datetime.now().year
+            logger.warning(f"Invalid year value '{year_value}' - using current year {current_year}")
+            return current_year
     
     def analysis_results_to_dict(self, results: List[LNAAnalysisResult]) -> List[Dict[str, Any]]:
         """

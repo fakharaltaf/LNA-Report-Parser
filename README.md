@@ -1,16 +1,17 @@
 # LNA Bot - AI-Powered Training Recommendations
 
-An intelligent command-line tool that analyzes Learning Need Analysis (LNA) reports and provides automated recommendations for training delivery methods.
+An intelligent web application that analyzes Learning Need Analysis (LNA) reports and provides automated recommendations for training delivery methods through an intuitive Streamlit interface.
 
 ## Features
 
 🤖 **AI-Powered Analysis**: Intelligent decision engine for training recommendations  
-📊 **CSV Processing**: Batch analysis of LNA reports in CSV format  
+📊 **File Processing**: Support for CSV and Excel files with multi-sheet capability  
 🎯 **Smart Classification**: Automatic competency classification (niche vs common)  
-📈 **Comprehensive Reporting**: Detailed analysis summaries and export capabilities  
-🖥️ **CLI Interface**: User-friendly command-line interface with rich formatting  
-⚡ **Interactive Mode**: Real-time single record analysis  
-🔧 **Configurable**: Flexible business rules and skills mapping
+📈 **Interactive Visualizations**: Charts, graphs, and comprehensive dashboards  
+💾 **Advanced Export**: Results in CSV, JSON, and professionally formatted Excel (.xlsx)  
+🎯 **Sample Datasets**: Pre-configured test scenarios for quick evaluation  
+🔧 **Configurable**: Flexible business rules and skills mapping  
+⚡ **Real-time Analysis**: Single record analysis with instant recommendations
 
 ## Business Logic
 
@@ -50,33 +51,52 @@ pip install -r requirements.txt
 
 ## Quick Start
 
-### 1. Prepare Your Data
+### 1. Launch the Application
 
-Ensure your LNA CSV file contains these columns:
-- `id`: Unique identifier
-- `competency`: Competency name
-- `estimated_trainees`: Number of trainees
-- `priority`: Priority level (High/Medium/Low)
-- `department`: Department name
-- `justification`: Analysis justification
-
-### 2. Run Analysis
-
+**Easy Launch (Recommended):**
 ```bash
-# Analyze a CSV file
-lna-bot analyze data/lna_report.csv
+# Using the launcher script
+python start_app.py
 
-# Export detailed results
-lna-bot analyze data/lna_report.csv --export-detailed -o results.json
-
-# Show summary only
-lna-bot analyze data/lna_report.csv --summary-only
+# Or on Windows, double-click:
+start_app.bat
 ```
 
-### 3. Interactive Mode
-
+**Manual Launch:**
 ```bash
-# Start interactive analysis
+# Start the Streamlit web interface directly
+streamlit run streamlit_app.py
+```
+
+The application will open in your browser at `http://localhost:8501`
+
+### 2. Choose Your Data Source
+
+**Option A: Upload Your Own File**
+- Click on "Upload Your File" tab
+- Drag & drop or browse for your CSV/Excel file
+- Click "Analyze File" to process
+
+**Option B: Try Sample Datasets**
+- Click on "Sample Datasets" tab
+- Choose from 7 pre-configured test scenarios
+- Load instantly with one click
+
+**Option C: Single Record Analysis**
+- Switch to "Single Record Analysis" tab
+- Enter training details manually
+- Get instant recommendations
+
+### 3. Expected File Format
+
+Your CSV/Excel file should contain these columns:
+- `ID`: Unique identifier
+- `Targeted competencies`: Competency name
+- `Estimated trainees`: Number of trainees  
+- `Priority`: Priority level (High/Medium/Low)
+- `Department`: Department name
+- `Division`: Division name
+- `Submission`: Date of request
 lna-bot interactive
 ```
 
@@ -88,27 +108,17 @@ lna-bot interactive
 # Run the main application
 python main.py
 
-# Or analyze specific dataset programmatically
-python -c "from src.lna_bot import LNABot; bot = LNABot(); bot.analyze('data/test_datasets/test_data.csv')"
-```
+### 4. Sample Datasets Available
 
-### Advanced Analysis
+The application includes 7 comprehensive test datasets:
 
-```bash
-# Process large datasets
-python main.py
-# Then select option 5 (test_data_large.csv)
-```
-
-### Configuration Management
-
-```bash
-# View current configuration
-lna-bot config
-
-# Check skills for a competency
-lna-bot skills "Patient Safety"
-```
+- **🏢 Multi-Industry Comprehensive** (25 records): Mixed scenarios across industries
+- **🚀 Niche Competencies** (25 records): Specialized skills testing SDP override
+- **🏭 Large-Scale Training** (25 records): Enterprise programs (55-500 trainees)
+- **👥 Small Group Edge Cases** (25 records): Individual/small group training (1-4 trainees)
+- **💼 Business Competencies Mix** (25 records): Realistic business scenarios
+- **⚠️ Error Handling Test** (25 records): Data validation and error recovery
+- **📊 Excel Multi-Sheet** (75 records): Excel workbook with 3 sheets
 
 ## Configuration
 

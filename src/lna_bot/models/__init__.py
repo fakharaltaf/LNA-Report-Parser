@@ -234,3 +234,35 @@ class SkillsMapping(BaseModel):
     def has_competency(self, competency: str) -> bool:
         """Check if a competency has associated skills defined."""
         return competency in self.competency_skills
+
+
+class ProcessingStatistics(BaseModel):
+    """
+    Statistics about data processing operations.
+    
+    This model captures important metrics about file processing,
+    including success rates, error counts, and validation warnings.
+    """
+    
+    total_rows: int = Field(description="Total number of rows in the input data")
+    successful_records: int = Field(description="Number of records successfully processed")
+    failed_records: int = Field(description="Number of records that failed processing")
+    validation_warnings: List[str] = Field(default_factory=list, description="List of validation warning messages")
+    processing_errors: List[str] = Field(default_factory=list, description="List of processing error messages")
+    
+    @property
+    def success_rate(self) -> float:
+        """Calculate the success rate as a percentage."""
+        if self.total_rows == 0:
+            return 0.0
+        return (self.successful_records / self.total_rows) * 100
+    
+    @property
+    def has_warnings(self) -> bool:
+        """Check if there are any validation warnings."""
+        return len(self.validation_warnings) > 0
+    
+    @property
+    def has_errors(self) -> bool:
+        """Check if there are any processing errors."""
+        return len(self.processing_errors) > 0

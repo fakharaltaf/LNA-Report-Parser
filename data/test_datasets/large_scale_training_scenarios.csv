@@ -1,0 +1,26 @@
+ID,Submission,Priority,Competency type,Job families,Targeted competencies,Request type,Targeted audience,Estimated trainees,Comment,Year,Division,Department,Section
+LNA201,2024-07-01,High,Soft Skills,All Departments,Communication & Presentation Skills,New Training,All Staff,500,Company-wide communication excellence program,2024,Corporate,Training & Development,Learning Center
+LNA202,2024-07-03,High,Leadership,Management,Strategic Planning & Decision Making,New Training,Senior Leadership,75,Strategic planning for 2025-2027 business cycle,2024,Executive,Strategy,Strategic Planning
+LNA203,2024-07-05,High,Soft Skills,Customer Service,Customer Relationship Management,New Training,Customer-Facing Staff,120,Customer experience transformation initiative,2024,Commercial,Customer Excellence,CX Transformation
+LNA204,2024-07-08,High,Leadership,Management,Change Management,New Training,Department Heads,95,Large-scale organizational change management,2024,Operations,Change Management,Transformation Office
+LNA205,2024-07-10,High,Soft Skills,All Departments,Time Management & Productivity,New Training,All Employees,300,Productivity optimization across all divisions,2024,Operations,Productivity Enhancement,Performance Management
+LNA206,2024-07-12,Medium,Leadership,Management,Emotional Intelligence & Team Dynamics,Upskilling,Team Leaders,85,Leadership effectiveness enhancement program,2024,Operations,Human Resources,Leadership Development
+LNA207,2024-07-15,Medium,Soft Skills,Sales & Marketing,Cross-Cultural Communication,Upskilling,Global Sales Teams,65,International market expansion support,2024,Commercial,Global Sales,International Markets
+LNA208,2024-07-18,Medium,Compliance,All Departments,Data Privacy & GDPR,Upskilling,Data Handlers,150,Enhanced data protection compliance,2024,Legal,Data Protection,Privacy Compliance
+LNA209,2024-07-20,Medium,Soft Skills,Customer Service,Conflict Resolution & De-escalation,Upskilling,Support Staff,90,Customer satisfaction improvement initiative,2024,Commercial,Customer Support,Conflict Resolution
+LNA210,2024-07-22,Medium,Leadership,Executive,Digital Leadership Strategy,Upskilling,Executive Team,55,Digital transformation leadership development,2024,Executive,Digital Strategy,Leadership Development
+LNA211,2024-07-25,Low,Soft Skills,All Departments,Communication & Presentation Skills,Refresher,All Employees,400,Annual communication skills refresher,2024,Corporate,Training & Development,Skills Maintenance
+LNA212,2024-07-28,Low,Compliance,Healthcare,Medical Device Regulations,Refresher,Quality Teams,80,Annual regulatory compliance update,2024,Quality,Regulatory Compliance,Medical Device QA
+LNA213,2024-07-30,Low,Soft Skills,All Departments,Time Management & Productivity,Refresher,All Staff,350,Productivity best practices refresher,2024,Operations,Organizational Development,Performance Management
+LNA214,2024-08-01,Low,Leadership,Management,Emotional Intelligence & Team Dynamics,Refresher,Management Level,70,Leadership skills maintenance program,2024,Operations,Management Development,Leadership Excellence
+LNA215,2024-08-03,Low,Soft Skills,Sales & Marketing,Customer Relationship Management,Refresher,Sales Teams,110,Customer relationship best practices update,2024,Commercial,Sales Excellence,Customer Success
+LNA216,2024-08-05,High,Technical,IT & Digital,Advanced Excel & Financial Modeling,New Training,Finance Teams,85,Advanced financial analysis capabilities,2024,Finance,Financial Analysis,Business Intelligence
+LNA217,2024-08-08,High,Technical,IT & Digital,Database Administration & Optimization,New Training,IT Teams,60,Database performance optimization,2024,Technology,Database Management,Performance Optimization
+LNA218,2024-08-10,High,Technical,Manufacturing,Lean Manufacturing & Six Sigma,New Training,Production Teams,120,Operational excellence implementation,2024,Manufacturing,Process Excellence,Lean Systems
+LNA219,2024-08-12,Medium,Technical,IT & Digital,Cybersecurity & Information Security,Upskilling,IT Security,80,Enhanced cybersecurity posture,2024,Technology,Information Security,Cyber Defense
+LNA220,2024-08-15,Medium,Technical,Engineering,Cloud Computing & DevOps,Upskilling,Development Teams,95,Cloud-first development practices,2024,Technology,Software Development,Cloud Engineering
+LNA221,2024-08-18,Low,Technical,Finance,Financial Risk Assessment,Refresher,Risk Teams,75,Risk management best practices update,2024,Finance,Risk Management,Risk Assessment
+LNA222,2024-08-20,Low,Technical,IT & Digital,Advanced Data Analytics,Refresher,Analytics Teams,60,Data analytics methodology refresher,2024,Technology,Data Science,Business Analytics
+LNA223,2024-08-22,Low,Technical,Manufacturing,Advanced Manufacturing Automation,Refresher,Manufacturing Staff,100,Automation safety and best practices,2024,Manufacturing,Automation Systems,Safety Training
+LNA224,2024-08-25,High,Soft Skills,All Departments,Cross-Cultural Communication,New Training,Global Workforce,200,Cultural competency for global operations,2024,Global Operations,Diversity & Inclusion,Cultural Excellence
+LNA225,2024-08-28,Medium,Leadership,Management,Strategic Planning & Decision Making,Upskilling,Middle Management,65,Strategic thinking development program,2024,Operations,Management Development,Strategic Leadership

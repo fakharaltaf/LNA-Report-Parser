@@ -1,0 +1,26 @@
+ID,Submission,Priority,Competency type,Job families,Targeted competencies,Request type,Targeted audience,Estimated trainees,Comment,Year,Division,Department,Section
+LNA401,2024-10-01,Low,Technical,IT & Digital,Cloud Computing & DevOps,New Training,Software Engineers,45,Fixed priority field test case,2024,Technology,IT Operations,Cloud Infrastructure
+LNA402,2024-10-02,High,Leadership,Management,Strategic Planning & Decision Making,Upskilling,Team Leaders,12,Fixed competency type test case,2024,Operations,Human Resources,Leadership Development
+LNA403,2024-10-03,Medium,Technical,Data Science,Advanced Data Analytics,New Training,Data Scientists,8,Fixed job families test case,2024,Technology,Data Science,Analytics Team
+LNA404,2024-10-04,Low,Soft Skills,All Departments,General Communication Skills,Refresher,All Employees,150,Fixed targeted competencies test case,2024,Corporate,Training & Development,Learning Center
+LNA405,2024-10-05,High,Technical,Finance,Financial Risk Assessment,New Training,Risk Analysts,6,Fixed request type test case,2024,Finance,Risk Management,Credit Risk
+LNA406,2024-10-06,Medium,Technical,IT & Digital,Cybersecurity & Information Security,Upskilling,Security Team,25,Fixed targeted audience test case,2024,Technology,Information Security,Security Operations
+LNA407,2024-10-07,High,Leadership,Management,Change Management,New Training,Senior Managers,8,Major organizational change - fixed trainees,2024,Operations,Change Management,Strategic Planning
+LNA408,2024-10-08,Low,Technical,IT & Digital,Basic Computer Skills,Refresher,All Staff,1,Minimal valid record with zero trainees,2024,Operations,Training,Basic Skills
+LNA409,2024-10-09,Invalid,Technical,Engineering,Machine Learning & AI,New Training,ML Engineers,35,Invalid priority level test case,2024,Technology,Research & Development,AI Innovation Lab
+LNA410,2024-10-10,High,InvalidType,All Departments,Data Privacy & GDPR,Refresher,All Employees,280,Invalid competency type test case,2024,Legal,Compliance,Regulatory Affairs
+LNA411,2024-10-11,Medium,Technical,IT & Digital,UnknownTechnology,New Training,Developers,15,Unknown/unmapped competency test case,2024,Technology,Development,Unknown Systems
+LNA412,2024-10-12,Low,Soft Skills,Sales & Marketing,Customer Relationship Management,InvalidRequest,Sales Team,22,Invalid request type test case,2024,Commercial,Sales,Customer Success
+LNA413,2024-10-13,High,Technical,Engineering,IoT & Embedded Systems,New Training,Hardware Engineers,-5,Negative trainees count test case,2024,Technology,Product Development,Hardware Engineering
+LNA414,2024-10-14,Medium,Soft Skills,All Departments,Time Management & Productivity,Refresher,All Employees,99999,Extremely large trainee count test case,2024,Operations,Organizational Development,Performance Management
+LNA415,2024-10-15,High,Technical,Finance,Advanced Excel & Financial Modeling,New Training,Financial Analysts,16.5,Decimal trainee count test case,2024,Finance,Financial Planning,Business Analysis
+LNA416,Invalid-Date,Medium,Leadership,Management,Emotional Intelligence & Team Dynamics,New Training,Team Leaders,28,Invalid date format test case,2024,Operations,Human Resources,Leadership Development
+LNA417,2024-10-17,High,Technical,IT & Digital,Database Administration & Optimization,New Training,Database Administrators,9,Valid record after error recovery,2024,Technology,Database Management,Systems Administration
+LNA418,2024-13-45,Low,Compliance,Healthcare,Medical Device Regulations,Refresher,Quality Assurance Team,14,Impossible date test case,2024,Quality,Regulatory Affairs,Medical Device QA
+LNA419,2024-10-19,High,Technical,Engineering,Renewable Energy Systems,New Training,Energy Engineers,31,Valid record for error recovery testing,2024,Engineering,Renewable Energy,Solar & Wind Systems
+LNA420,2024-10-20,Medium,Soft Skills,All Departments,Cross-Cultural Communication,New Training,Global Teams,42,Final valid record in error test dataset,2024,Global Operations,International Relations,Cultural Integration
+LNA421,2024-10-21,High,Technical,IT & Digital,Blockchain Technology,New Training,Blockchain Developers,1000000,Million trainee stress test,2024,Technology,Blockchain,Massive Scale
+LNA422,2024-10-22,Low,Technical,Finance,Cryptocurrency & Digital Assets,Refresher,Analysts,0.1,Fractional trainee edge case,2024,Finance,Digital Assets,Fractional Training
+LNA423,2024-10-23,Medium,Leadership,Executive,Strategic Leadership,Upskilling,C-Suite,999999999,Billion trainee extreme case,2024,Executive,Strategy,Extreme Scale
+LNA424,2024-10-24,High,Soft Skills,Customer Service,Communication Skills,New Training,Representatives,20,Fixed trainee value test,2024,Commercial,Customer Service,Fixed Test
+LNA425,2024-10-25,Very High,Technical,AI Research,Artificial General Intelligence,New Training,AGI Researchers,5,Invalid priority and future tech test,2024,Research,Future Tech,AGI Lab

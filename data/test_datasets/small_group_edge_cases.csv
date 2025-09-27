@@ -1,0 +1,26 @@
+ID,Submission,Priority,Competency type,Job families,Targeted competencies,Request type,Targeted audience,Estimated trainees,Comment,Year,Division,Department,Section
+LNA301,2024-09-01,High,Technical,Finance,Cryptocurrency & Digital Assets,New Training,Investment Team,1,Specialized digital asset expertise for portfolio management,2024,Finance,Investment Management,Digital Assets
+LNA302,2024-09-02,Medium,Leadership,Executive,Digital Leadership Strategy,Upskilling,CEO,1,Executive digital transformation leadership,2024,Executive,Office of CEO,Strategic Leadership
+LNA303,2024-09-03,High,Technical,Healthcare,Nuclear Medicine,New Training,Nuclear Specialist,1,Specialized nuclear medicine procedures certification,2024,Healthcare,Nuclear Medicine,Radiopharmacy
+LNA304,2024-09-04,Low,Soft Skills,Management,Emotional Intelligence & Team Dynamics,Refresher,Department Head,1,Individual leadership coaching session,2024,Operations,Management Development,Executive Coaching
+LNA305,2024-09-05,High,Technical,Technology,Quantum Computing Fundamentals,New Training,Chief Scientist,1,Quantum computing research leadership,2024,Research,Advanced Computing,Quantum Leadership
+LNA306,2024-09-06,Medium,Technical,Aerospace,Space Technology & Satellite Systems,New Training,Lead Engineer,1,Satellite system architecture expertise,2024,Technology,Aerospace Engineering,System Architecture
+LNA307,2024-09-07,High,Technical,Healthcare,Precision Medicine & Genomics,New Training,Research Director,1,Personalized medicine research strategy,2024,Research,Genomics Research,Strategic Research
+LNA308,2024-09-08,Low,Compliance,Legal,Data Privacy & GDPR,Refresher,Chief Privacy Officer,1,Advanced privacy law and compliance update,2024,Legal,Privacy Office,Regulatory Compliance
+LNA309,2024-09-09,High,Technical,Technology,Artificial Intelligence Ethics,New Training,AI Ethics Lead,1,AI governance and ethical framework development,2024,Technology,AI Governance,Ethics Leadership
+LNA310,2024-09-10,Medium,Technical,Materials,Advanced Materials Science,New Training,Materials Scientist,1,Next-generation materials research expertise,2024,Research,Materials Science,Advanced Research
+LNA311,2024-09-11,High,Technical,Finance,Algorithmic Trading Systems,New Training,Quant Lead,2,High-frequency trading algorithm development,2024,Finance,Quantitative Trading,Algorithm Development
+LNA312,2024-09-12,Medium,Technical,Manufacturing,3D Printing & Additive Manufacturing,Upskilling,Manufacturing Leads,2,Advanced additive manufacturing techniques,2024,Manufacturing,Advanced Manufacturing,3D Systems
+LNA313,2024-09-13,High,Technical,Technology,Extended Reality (XR) Development,New Training,XR Team Leads,2,Immersive technology platform leadership,2024,Technology,Emerging Tech,XR Leadership
+LNA314,2024-09-14,Low,Technical,Energy,Renewable Energy Systems,Refresher,Energy Consultants,2,Clean energy technology update,2024,Engineering,Clean Energy,Renewable Systems
+LNA315,2024-09-15,High,Technical,Automotive,Autonomous Vehicle Systems,New Training,AV Engineers,2,Self-driving technology development expertise,2024,Technology,Autonomous Systems,Vehicle AI
+LNA316,2024-09-16,Medium,Technical,Technology,Computer Vision & Image Recognition,Upskilling,Vision Engineers,3,Advanced computer vision algorithm development,2024,Technology,AI Systems,Computer Vision
+LNA317,2024-09-17,High,Technical,Technology,Natural Language Processing,New Training,NLP Specialists,3,Advanced language AI system development,2024,Technology,AI Research,Language Systems
+LNA318,2024-09-18,Low,Technical,Healthcare,Telemedicine & Digital Health,Refresher,Digital Health Team,3,Telehealth platform optimization,2024,Healthcare,Digital Health,Platform Management
+LNA319,2024-09-19,High,Technical,Technology,Virtual Reality & Augmented Reality,New Training,VR/AR Developers,3,Immersive experience development expertise,2024,Technology,VR/AR Systems,Experience Design
+LNA320,2024-09-20,Medium,Technical,Manufacturing,Robotics & Automation,Upskilling,Robotics Engineers,3,Advanced robotics system integration,2024,Manufacturing,Robotics,System Integration
+LNA321,2024-09-21,High,Technical,Energy,Sustainable Engineering Practices,New Training,Sustainability Engineers,4,Green engineering implementation expertise,2024,Engineering,Sustainability,Green Systems
+LNA322,2024-09-22,Medium,Technical,Finance,ESG Reporting & Sustainability Metrics,Upskilling,ESG Team,4,Environmental reporting and compliance,2024,Finance,ESG Compliance,Sustainability Metrics
+LNA323,2024-09-23,High,Technical,Technology,IoT & Embedded Systems,New Training,IoT Specialists,4,Internet of Things architecture development,2024,Technology,IoT Systems,Architecture
+LNA324,2024-09-24,Low,Technical,Technology,Machine Learning & AI,Refresher,AI Engineers,4,Machine learning best practices update,2024,Technology,AI Development,ML Systems
+LNA325,2024-09-25,High,Technical,Technology,Blockchain Technology,New Training,Blockchain Architects,4,Decentralized system architecture expertise,2024,Technology,Blockchain Systems,Architecture

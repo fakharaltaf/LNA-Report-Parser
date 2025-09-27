@@ -1,0 +1,26 @@
+ID,Submission,Priority,Competency type,Job families,Targeted competencies,Request type,Targeted audience,Estimated trainees,Comment,Year,Division,Department,Section
+LNA101,2024-05-01,High,Technical,Healthcare,Precision Medicine & Genomics,New Training,Medical Researchers,3,Cutting-edge personalized medicine research initiative,2024,Research,Medical Research,Genomics Lab
+LNA102,2024-05-03,High,Technical,Finance,Algorithmic Trading Systems,New Training,Quantitative Analysts,4,High-frequency trading system development,2024,Finance,Trading,Quantitative Research
+LNA103,2024-05-05,High,Technical,Manufacturing,3D Printing & Additive Manufacturing,New Training,Design Engineers,6,Advanced manufacturing technology adoption,2024,Manufacturing,Product Design,Advanced Manufacturing
+LNA104,2024-05-07,High,Technical,Healthcare,Telemedicine & Digital Health,New Training,Healthcare IT Specialists,5,Digital health platform implementation,2024,Healthcare,IT Systems,Digital Health
+LNA105,2024-05-10,High,Technical,Energy,Nuclear Medicine,New Training,Nuclear Technicians,2,Specialized nuclear medicine procedures,2024,Healthcare,Nuclear Medicine,Radiopharmacy
+LNA106,2024-05-12,High,Technical,Aerospace,Space Technology & Satellite Systems,New Training,Aerospace Engineers,4,Satellite communication system development,2024,Technology,Aerospace,Satellite Systems
+LNA107,2024-05-15,High,Technical,Manufacturing,Robotics & Automation,New Training,Automation Engineers,7,Factory automation upgrade project,2024,Manufacturing,Automation,Robotics Systems
+LNA108,2024-05-18,High,Technical,Technology,Extended Reality (XR) Development,New Training,XR Developers,5,Immersive technology platform development,2024,Technology,Emerging Technologies,XR Development
+LNA109,2024-05-20,High,Technical,Automotive,Autonomous Vehicle Systems,New Training,Automotive Engineers,6,Self-driving vehicle technology development,2024,Technology,Automotive Research,Autonomous Systems
+LNA110,2024-05-22,High,Technical,Technology,Computer Vision & Image Recognition,New Training,AI Specialists,4,Visual AI system development,2024,Technology,AI Research,Computer Vision
+LNA111,2024-05-25,High,Technical,Technology,Natural Language Processing,New Training,NLP Engineers,5,Advanced language AI development,2024,Technology,AI Research,NLP Systems
+LNA112,2024-05-28,High,Technical,Materials,Advanced Materials Science,New Training,Materials Engineers,3,Next-generation material development,2024,Research,Materials Science,Advanced Materials
+LNA113,2024-06-01,High,Technical,Energy,Sustainable Engineering Practices,New Training,Environmental Engineers,8,Green engineering implementation,2024,Engineering,Environmental,Sustainability
+LNA114,2024-06-03,High,Technical,Finance,ESG Reporting & Sustainability Metrics,New Training,ESG Analysts,6,Environmental sustainability reporting,2024,Finance,ESG Compliance,Sustainability Reporting
+LNA115,2024-06-05,High,Technical,Technology,Virtual Reality & Augmented Reality,New Training,VR/AR Developers,5,Immersive experience development,2024,Technology,Emerging Technologies,VR/AR Development
+LNA116,2024-06-08,Medium,Technical,Manufacturing,Advanced Manufacturing Automation,Upskilling,Manufacturing Engineers,15,Smart factory implementation,2024,Manufacturing,Process Engineering,Automation Systems
+LNA117,2024-06-10,Medium,Technical,Energy,Renewable Energy Systems,Upskilling,Energy Technicians,18,Solar and wind energy expansion,2024,Engineering,Renewable Energy,Clean Technology
+LNA118,2024-06-12,Medium,Technical,Technology,IoT & Embedded Systems,Upskilling,IoT Engineers,20,Internet of Things infrastructure,2024,Technology,IoT Systems,Embedded Development
+LNA119,2024-06-15,Medium,Technical,Finance,Blockchain Technology,Upskilling,FinTech Developers,12,Decentralized finance platform development,2024,Finance,FinTech,Blockchain Systems
+LNA120,2024-06-18,Medium,Technical,Healthcare,Machine Learning & AI,Upskilling,Healthcare Data Scientists,16,AI-driven healthcare analytics,2024,Healthcare,Data Analytics,Medical AI
+LNA121,2024-06-20,Low,Technical,IT & Digital,Quantum Computing Fundamentals,Refresher,Research Staff,25,Quantum computing awareness program,2024,Research,Advanced Computing,Quantum Systems
+LNA122,2024-06-22,Low,Technical,Technology,Artificial Intelligence Ethics,Refresher,AI Development Teams,35,Responsible AI development practices,2024,Technology,AI Ethics,Governance
+LNA123,2024-06-25,Low,Technical,Manufacturing,3D Printing & Additive Manufacturing,Refresher,Design Teams,28,Additive manufacturing best practices,2024,Manufacturing,Design Engineering,3D Systems
+LNA124,2024-06-28,Low,Technical,Energy,Advanced Materials Science,Refresher,Materials Teams,22,Advanced materials handling procedures,2024,Research,Materials Engineering,Advanced Materials
+LNA125,2024-06-30,Low,Technical,Healthcare,Precision Medicine & Genomics,Refresher,Medical Staff,30,Personalized medicine protocols,2024,Healthcare,Genomics,Precision Medicine

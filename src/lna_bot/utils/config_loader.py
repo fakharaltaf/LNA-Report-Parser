@@ -272,11 +272,17 @@ class DataLoader:
             if df.empty:
                 raise ValueError("CSV file is empty")
             
-            # Check for required non-null columns
+            # Log warnings for missing data instead of failing completely
             critical_columns = ['ID', 'Priority', 'Targeted competencies', 'Estimated trainees']
+            total_null_records = 0
             for col in critical_columns:
-                if df[col].isnull().any():
-                    raise ValueError(f"Column '{col}' contains null values")
+                null_count = df[col].isnull().sum()
+                if null_count > 0:
+                    logger.warning(f"Column '{col}' contains {null_count} null values - these records will be skipped")
+                    total_null_records = max(total_null_records, null_count)
+            
+            if total_null_records > 0:
+                logger.info(f"Will attempt to process {len(df) - total_null_records} valid records out of {len(df)} total records")
             
             logger.info(f"Successfully loaded CSV file: {file_path} ({len(df)} records)")
             
